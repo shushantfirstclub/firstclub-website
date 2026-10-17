@@ -1,0 +1,43 @@
+/* Home & Lifestyle category theme — approved 2026-09-29 as a category token set, scoped to the
+   `appliance` and `jewellery` PDP shapes only. Values transcribed verbatim from
+   "pdp for home& lifestyle .fig" (Appliance PDP 1:17876 · Jewellary PDP). Never use these on
+   core product UI outside those shapes. */
+:root{
+--hl-brand:#07356C;              /* CTA fill, selected variant pill */
+--hl-on-brand:var(--color-pure-white); /* CTA label, counter icons, cart badge — #FFFFFF (2026-09-30) */
+--hl-cream:#FCF7ED;              /* CTA fade ground */
+--hl-link:#024874;               /* links, tab outline pills, star, details band ink */
+--hl-pill-ring:#C1C1C1;          /* unselected "Complete your look" pill ring (file value) */
+--hl-verified-ink:#011B3A;       /* FC VERIFIED eyebrow */
+--hl-mark:#5793D8;               /* FirstClub Logo tint on the verified card and the Filter band */
+--hl-hero-surface:#F6FFEF;--hl-hero-ring:#EAF2E7;
+/* Product Buying Guide step indicator — "Step indicator.svg" (2026-10-12, file values) */
+--hl-step-surface:#EFF6FF;--hl-step-ring-from:#ABD1FB;--hl-step-ink:#073F81;
+/* Compare table — this product's column, "Size Guide.svg" (2026-10-12, file values); ink is --hl-step-ink */
+--hl-compare-head:#EAF4FF;--hl-compare-cell:#F8FBFF;--hl-compare-line:#DFEEFF;
+/* Product Buying Guide entry card — "product buying guid.svg" (2026-10-12, file values) */
+--hl-guide-card:linear-gradient(180deg,#FFFFFF 0%,#F2F8FF 100%); /* @kind color */ /* product buying guid-e257e4a4.svg, 2026-10-12 */
+--hl-guide-ring:var(--border-default); /* 0.6px #E8E8E8 — product buying guid-e257e4a4.svg, 2026-10-12 */--hl-guide-icon-from:#98C8FB;--hl-guide-icon-to:#2063AA;
+--hl-verified-surface:#F5F9FF;--hl-verified-ring:#DAEBFF;
+--hl-refund-from:#FFFFFF;--hl-refund-to:#FBF7DB;--hl-refund-ring:#FBF3D3;
+--hl-coin-from:#FFD97C;--hl-coin-to:#E6B132;
+--hl-coin-sheet-from:#FFD05D;--hl-coin-sheet-to:#D29705; /* Return Policy sheet header coin (supplied svg) */
+--hl-spec-band:rgba(26,26,26,0.6);--hl-spec-label:rgba(255,255,255,0.7);--hl-spec-rule:rgba(255,255,255,0.6);
+--hl-details-to:#CFE4FD;
+--hl-filter-ground:linear-gradient(180deg,rgba(94,149,214,0) 0%,rgba(94,149,214,0.2424) 28.34%,rgba(57,120,194,0.3) 64.09%),linear-gradient(#FFFDFA,#FFFDFA); /* @kind color */
+--hl-filter-card:linear-gradient(180deg,rgba(102,166,239,0.2) 0%,rgba(7,65,133,0.2) 100%); /* @kind color */
+--hl-status-surface:#EAF6ED;
+--hl-page-warm:#FFFDFC;
+--hl-plate:rgba(26,26,26,0.5);--hl-plate-badge-to:#BED4EE;--hl-plate-badge-ring:#7BB0F0;
+--hl-rating-stack-to:#C7E1FF; /* stacked rating variant, uploads/rating_pill2.svg (2026-10-13) */ --hl-rating-top-to:#E9F3FF;--hl-rating-ring:#B2D4FD;--hl-rating-foot:#D8EAFF;--hl-rating-foot-ink:#053874; /* new-PDP rating chip, uploads/rating.svg */
+--hl-chip-glass:rgba(255,255,255,0.6);
+--hl-nav-ground:rgba(255,253,252,0.4);
+--hl-care-scrim:linear-gradient(180deg,rgba(26,26,26,0) 0%,#1A1A1A 100%); /* @kind color */
+--hl-care-copy:#E8E8E8;
+--hl-care-number:linear-gradient(180deg,#FFFFFF 0%,rgba(255,255,255,0) 100%); /* @kind color */
+--hl-dots:rgba(26,26,26,0.6);
+/* Collection band — "collection header-2a4ef85b.svg" (2026-10-13, file values); ink is --hl-brand */
+--hl-collection-from:#E6EFFB;--hl-collection-ring:#5A95DB;--hl-collection-wave:#84B0FA;
+/* Collection card — "collection name.svg" (2026-10-13, file values); ring + tile ring are --border-default */
+--hl-collection-card:linear-gradient(180deg,#FFFFFF 0%,#F6F6F6 100%); /* @kind color */
+}

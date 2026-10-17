@@ -1,0 +1,21 @@
+/* Platter device standard — the approved iPhone canvas every screen is presented in.
+   Foundation rule: docs/02-foundations/device.md. Screens are authored at 390 x 844 and the
+   frame supplies the bezel, the corner radius and the safe-area insets around them. */
+:root{
+--device-width:390px;          /* the official viewport — never another width */
+--device-height:844px;
+--device-radius:44px;          /* screen corner radius inside the bezel */
+--device-bezel:12px;           /* bezel thickness around the screen */
+--device-bezel-radius:56px;    /* device outer radius = screen radius + bezel */
+--safe-area-top:48px;          /* status bar / Dynamic Island band the screens reserve */
+/* --safe-area-bottom (34px, home indicator) lives in tokens/spacing.css beside the
+   floating-surface tokens that consume it. */
+}
+
+/* The device shell. Plain HTML pages add these two classes; React and Design Components use
+   the PhoneFrame component, which renders exactly this markup. */
+.platter-device{position:relative;width:calc(var(--device-width) + 2*var(--device-bezel));height:calc(var(--device-height) + 2*var(--device-bezel));flex-shrink:0;padding:var(--device-bezel);box-sizing:border-box;border-radius:var(--device-bezel-radius);background:var(--color-black-coffee);box-shadow:0 24px 60px rgba(26,26,26,.28), inset 0 0 0 1px rgba(255,255,255,.06)}
+.platter-device__screen{position:relative;width:var(--device-width);height:var(--device-height);overflow:hidden;border-radius:var(--device-radius);background:var(--surface-page);-webkit-overflow-scrolling:touch}
+/* The home indicator sits on the screen, inside the bottom safe area. Floating surfaces clear it
+   by --floating-offset; nothing else may overlap it. */
+.platter-device__indicator{position:absolute;left:50%;transform:translateX(-50%);bottom:9px;width:138px;height:5px;border-radius:5px;background:var(--content-primary);opacity:.9;pointer-events:none;z-index:99}

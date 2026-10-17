@@ -1,0 +1,115 @@
+/* Platter colors — the official Platter Design System colour system.
+   Names and values are canonical (confirmed 2026-08-03). Do not invent, approximate or add shades.
+   Usage priority: 1 semantic tokens → 2 core palette → 3 core & semantic extensions → 4 optional. */
+:root{
+/* ── 1 · CORE PALETTE ─────────────────────────────────── */
+--color-avocado-skin:#044123;   /* Primary — CTA, active nav, brand elements, primary icons, selected states */
+--color-green-pea:#12934A;      /* Success */
+--color-black-coffee:#1A1A1A;   /* Primary text */
+--color-chili:#DE1135;          /* Error, destructive */
+--color-turmeric:#F6BC2F;       /* Warning */
+--color-cashew-cream:#FCF7ED;   /* App background */
+
+/* ── 2 · SEMANTIC PALETTE ─────────────────────────────── */
+--color-pure-white:#FFFFFF;     /* Background / Surface */
+--color-charcoal:#646464;       /* Content / Secondary */
+--color-ash:#C1C1C1;            /* Content / Disabled */
+--color-chalk-line:#E8E8E8;     /* Border / Default */
+--color-background:#F8F8F8;     /* Border / Subtle */
+
+/* ── 3 · CORE & SEMANTIC EXTENSIONS ───────────────────── */
+--color-avocado-pit:#00271A;     /* Primary dark */
+--color-avocado-whip:#EAF2E7;    /* Primary light */
+--color-avocado-mist:#F6FFEF;    /* Primary surface */
+--color-green-pea-tint:#EAF6ED;  /* Success surface */
+--color-turmeric-tint:#FDF2DC;   /* Warning surface */
+--color-chili-tint:#FFF0EE;      /* Error surface */
+--color-almond-milk:#FAF2E6;     /* Neutral surface */
+--color-toasted-cashew:#FBEEDB;  /* Elevated surface */
+--color-mint-wash:#E6F4EE;       /* Informational surface */
+
+/* ── 4 · OPTIONAL PALETTE ─────────────────────────────────────────────
+   Marketing, campaigns, storytelling, seasonal, editorial only.
+   Never for core product UI. */
+--color-dried-berry:#A24C5A;
+--color-raw-honey:#E1B97D;
+--color-sea-leaf:#5E8572;
+--color-sea-leaf-tint:#E4F1EA;
+--color-olive-night:#1B2A21;
+--color-coconut-milk:#F2F2F2;
+--color-fig-preserve:#8E6F9F;
+--color-matcha-mist:#A4C8A6;
+--color-cacao-dust:#3D3D3D;
+--color-toasted-oat:#D9C7AD;
+
+/* ── SEMANTIC TOKENS — always prefer these in product code ─────────── */
+--background-primary:var(--color-cashew-cream);
+--background-surface:var(--color-pure-white);
+--content-primary:var(--color-black-coffee);
+--content-secondary:var(--color-charcoal);
+--content-disabled:var(--color-ash);
+--border-default:var(--color-chalk-line);
+--border-subtle:var(--color-background);
+
+/* Surfaces */
+--surface-page:var(--background-primary);
+--surface-card:var(--background-surface);
+--surface-raised:var(--color-almond-milk);
+--surface-elevated:var(--color-toasted-cashew);
+--surface-subtle:var(--color-background);
+--surface-muted:var(--color-coconut-milk);
+--surface-brand:var(--color-avocado-skin);
+--surface-brand-light:var(--color-avocado-whip);
+--surface-brand-subtle:var(--color-avocado-mist);
+--surface-inverse:var(--color-black-coffee);
+--surface-dark:var(--color-avocado-pit);
+--surface-success:var(--color-green-pea-tint);
+--surface-error:var(--color-chili-tint);
+--surface-warning:var(--color-turmeric-tint);
+--surface-informational:var(--color-mint-wash);
+--surface-disabled:var(--color-ash);
+
+/* Content */
+--text-primary:var(--content-primary);
+--text-secondary:var(--content-secondary);
+--text-tertiary:var(--content-disabled);
+--text-disabled:var(--content-disabled);
+--text-inverse:var(--color-pure-white);
+--text-brand:var(--color-avocado-skin);
+--text-success:var(--color-green-pea);
+--text-error:var(--color-chili);
+--text-critical:var(--color-chili);
+--text-warning:var(--color-turmeric);
+--text-placeholder:var(--content-disabled);
+
+/* Borders */
+--border-input:var(--color-chalk-line);
+--border-strong:var(--color-black-coffee);
+--border-brand:var(--color-avocado-skin);
+--border-error:var(--color-chili);
+
+/* Links */
+--link-color:var(--color-avocado-skin);
+--link-color-hover:var(--color-green-pea);
+
+/* ── LEGACY ALIASES ───────────────────────────────────────────────────
+   Earlier Platter builds shipped these names; they now resolve to the
+   official tokens above. Prefer the official names in new work. */
+--color-pea-deep:var(--color-avocado-skin);
+--color-pea-darkest:var(--color-avocado-pit);
+--text-muted:var(--content-secondary);
+--border-cream:var(--color-chalk-line);
+
+/* ── AWAITING APPROVAL ────────────────────────────────────────────────
+   Values found in the Figma components that are NOT in the official
+   colour system. Each is mapped to its nearest approved token so no
+   unapproved hex ships. Confirm or replace — see readme.md › Colour. */
+--color-pea-mid:var(--color-avocado-skin);        /* was #075B3A */
+--color-alert-red:var(--color-chili);             /* was #E45050 */
+--color-charcoal-soft:var(--content-secondary);   /* was #616161 */
+--color-hairline-input:var(--color-chalk-line);   /* was #AEADAD */
+--color-hairline-soft:var(--color-chalk-line);    /* was #E0E0E0 */
+--color-amber-warn:var(--color-turmeric);         /* was #E6B800 */
+--color-cream-border:var(--color-chalk-line);     /* was #D9C7AD */
+--color-cream-border-soft:var(--color-chalk-line);/* was #D9C7AD */
+}

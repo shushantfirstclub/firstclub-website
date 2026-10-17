@@ -1,0 +1,7 @@
+/* Generated from Figma Variables. First mode = :root default.
+   FLOAT tokens are unitless — multiply by 1px in calc() where a length is needed. */
+
+:root {
+  --quantity: "68g"; /* @kind other */
+  --social-proof-text: "20+ bought today";
+}

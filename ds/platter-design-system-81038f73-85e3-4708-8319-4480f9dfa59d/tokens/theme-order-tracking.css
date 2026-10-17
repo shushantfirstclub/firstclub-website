@@ -1,0 +1,30 @@
+/* Order Tracking (quick commerce) — file values from Order Tracking.fig › Release v1.0 › Updated Delay Handling.
+   Core palette covers ink, borders and brand; these are the screen's own surfaces and state accents. */
+:root{
+--ot-hero-ground:linear-gradient(180deg,#D8F4CE -15.74%,#EAF2E7 66.20%); /* @kind color */
+--ot-status-ground:linear-gradient(180deg,#FEF9ED 0%,#FAECC8 100%); /* @kind color */
+--ot-status-sheen:linear-gradient(180deg,#FFFFFF 0%,rgba(255,255,255,0) 100%); /* @kind color */
+--ot-header-stuck:linear-gradient(180deg,#FFFFFF 0%,#FFF9ED 100%); /* @kind color */
+--ot-eta-on:linear-gradient(180deg,#0F874C 0%,#044123 100%); /* @kind color */
+--ot-eta-late:linear-gradient(180deg,#FFD97D 0%,#F6BC2F 100%); /* @kind color */
+--ot-eta-late-ink:#7B5202;
+--ot-chip-late:#956300;
+--ot-rider-ground:linear-gradient(180deg,#F2FFC9 0%,#FFFFFF 100%); /* @kind color */
+--ot-rider-ring:#DBF190;
+--ot-rider-rule:#CAE473;
+--ot-message-ground:#E1FFD6;
+--ot-message-ring:#A1F382;
+--ot-more-ground:#F8F7F0;
+--ot-more-ink:#B6B2B2;
+--ot-knowmore-ring:rgba(26,26,26,0.2);
+--ot-knowmore-rim:#012111;
+--ot-knowmore-label:linear-gradient(180deg,#FFFFFF 0%,#CBFFE2 100%); /* @kind color */
+--ec-refund-ground:#FFF8DC; /* e-comm refund strip, ORDER TRACKING FOR ECOMM.fig */
+--ec-refund-ring:#E1E1E1;
+--ec-cancel-ground:#FFF0EE; /* Cancel this Order pill */
+--ec-cancel-ring:rgba(222,17,53,0.2);
+--ec-slot-ground:#F6FFEF; /* Delivery Info on-time ground — ORDER TRACKING FOR ECOMM.fig, reused by the slotted slot card */
+--ec-delay-ground:#FDF2DC; /* Delivery Info delay ground */
+--ot-hairline:0.6px;
+--ot-card-radius:16px;
+}

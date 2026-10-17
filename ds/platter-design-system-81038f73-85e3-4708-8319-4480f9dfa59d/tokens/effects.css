@@ -1,0 +1,19 @@
+/* Platter borders, elevation and motion. Platter is a flat, hairline-driven system:
+   there are no drop shadows anywhere in the source — separation comes from 0.6px
+   inset strokes, 1px dividers and cream-on-white surface shifts. */
+:root{
+--hairline:0.6px;
+--stroke-input:inset 0 0 0 0.6px var(--border-input);
+--stroke-outline:inset 0 0 0 0.6px var(--color-black-coffee);
+--stroke-soft:inset 0 0 0 1px var(--border-subtle);
+--stroke-cream:inset 0 0 0 0.6px var(--border-cream);
+--divider:1px solid var(--border-default);
+--elevation-none:none;
+
+--duration-fast:120ms; /* @kind other */
+--duration-base:180ms; /* @kind other */
+--duration-slow:260ms; /* @kind other */
+--ease-standard:cubic-bezier(0.2,0,0.2,1); /* @kind other */
+--press-scale:0.97; /* @kind other */
+--disabled-opacity:0.4; /* @kind other */
+}

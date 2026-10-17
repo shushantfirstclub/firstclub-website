@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block");
+/* Platter webfonts. Both faces are variable TTFs supplied with the source file. */
+@font-face{font-family:"Plus Jakarta Sans";src:url("../assets/fonts/PlusJakartaSans-Variable.ttf") format("truetype-variations");font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Plus Jakarta Sans";src:url("../assets/fonts/PlusJakartaSans-Italic-Variable.ttf") format("truetype-variations");font-weight:200 800;font-style:italic;font-display:swap}
+@font-face{font-family:"Fraunces";src:url("../assets/fonts/Fraunces-Variable.ttf") format("truetype-variations");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Fraunces";src:url("../assets/fonts/Fraunces-Italic-Variable.ttf") format("truetype-variations");font-weight:100 900;font-style:italic;font-display:swap}
+/* Icon foundation (2026-09-29): every icon is Material Symbols Rounded — weight 200, fill off,
+   grade 0, optical size 24. Fill is switched on only where a component explicitly asks for it. */
+:root{--icon-font:"Material Symbols Rounded";--icon-weight:200;--icon-fill:0;--icon-grade:0 /* @kind font */;--icon-opsz:24 /* @kind font */}

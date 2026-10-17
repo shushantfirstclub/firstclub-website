@@ -1,0 +1,35 @@
+/* Home — store theming (homepage.fig, Page 3). Each L0 store paints its own header; these are the
+   file's own values, scoped to the Home screen. Core product UI still uses the semantic tokens. */
+:root{
+--home-delivery-time:#616161;
+--home-header-grocery:#8CD3FC;
+/* stops measured from the Figma handles: search-bar bottom to L1 chip bottom */
+--home-header-grocery-all:linear-gradient(180deg,#BAE6AC 167px,#FCF7ED 310px); /* @kind color */
+--home-header-cafe:#E6D9AC;
+--home-header-beauty:#FFDCE9;
+--home-pill-selected-bg:rgba(0,0,0,0.1);
+--home-pill-selected-shadow:inset 0px -1px 0px 0px rgba(255,255,255,0.8),inset 0px 4px 1px 0px rgba(0,0,0,0.12);
+--home-pill-idle-bg:rgba(255,255,255,0.25);
+--home-pill-idle-ring:rgba(255,255,255,0.3);
+/* Beauty store (beauty inactive button-e6fac43f.svg, 2026-09-30 — supersedes the earlier solid
+   blush draft): un-selected pills keep the 25% white wash, with a 31% white hairline and a deep
+   olive label instead of Charcoal. */
+--home-pill-idle-bg-beauty:rgba(255,255,255,0.25);
+--home-pill-idle-ring-beauty:rgba(255,255,255,0.31);
+--home-pill-idle-label-beauty:#574A1C;
+--home-tab-lift:0px 4px 0px 0px rgba(0,0,0,0.25);
+--home-tile-ring:#DCD5BE;
+--home-coach-scrim:rgba(0,39,26,0.85);
+--home-fc-mark-bg:linear-gradient(187.574deg,#46B4A2 -15.52%,#0D4E49 91.94%);
+--home-fc-mark-ink:linear-gradient(135.526deg,#C7B37F -8.33%,#FFF9C6 46.26%,#7D5B18 105.22%); /* @kind color */
+--home-finds-scrim:rgba(0,0,0,0.24);
+--home-banner-cta:#173C2B;
+--home-banner-cta-ink:#FDF1E0;
+--home-banner-peping:linear-gradient(180deg,#F6E1BB 8.12%,#E4BD7A 100%); /* @kind color */
+--home-banner-peping-sky:#8DD3FC;
+--home-banner-peping-ink:#0F384E;
+--home-banner-cafe:#F0E7C8;
+--home-banner-cafe-glow:#F4EAD9;
+--home-banner-cafe-ink:#471F11;
+--home-dock-fade:linear-gradient(180deg,rgba(252,247,237,0) 14.88%,#FCF7ED 91.48%); /* @kind color */
+}

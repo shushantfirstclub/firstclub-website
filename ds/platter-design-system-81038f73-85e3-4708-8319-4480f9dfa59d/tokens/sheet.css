@@ -1,0 +1,12 @@
+/* Platter bottom sheets — the shared sheet geometry every PDP / PLP sheet inherits.
+   Floating surfaces (cart floater, toast, floating CTA) keep --floating-offset (66px).
+   Bottom SHEETS use the value the .fig draws on its sheet container: 36px bottom padding.
+   Decision recorded 2026-08-04 — see docs/02-foundations/floating-surfaces.md § Bottom sheets. */
+:root{
+--sheet-offset:36px;          /* bottom inset for Sort / Filter / Knowledge / Trust sheets */
+--sheet-width:366px;          /* same span as --floating-width */
+--sheet-radius:24px;          /* .fig sheet corner radius */
+--sheet-footer-height:80px;   /* Footer Bottomsheet: 80px tall, 16px padding */
+--sheet-overlay:rgba(18,18,18,.6);
+--sheet-max-height:709px;     /* the tallest sheet the .fig draws (Nutrition Facts) */
+}

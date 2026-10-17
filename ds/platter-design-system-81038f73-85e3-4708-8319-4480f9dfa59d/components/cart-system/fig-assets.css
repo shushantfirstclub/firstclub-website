@@ -1,0 +1,6 @@
+/* Assets copied verbatim from cart.fig. The "stairs" texture sits behind the gifts-zone
+   header at 0.5 opacity, twice, at the rotations the file draws. */
+.cart-texture { position: absolute; left: 0; top: 0; width: 245.511px; height: 171.584px; opacity: 0.5; overflow: hidden; pointer-events: none; background: url(./assets/a8efc975d9ae0c70.png) 0 0 / 215.918px 126.405px no-repeat; }
+.cart-texture--a { transform: matrix(0.278, 0.961, -0.961, 0.278, 353.867, -204.052); transform-origin: 0 0; }
+.cart-texture--b { transform: matrix(0.979, -0.203, 0.203, 0.979, -76.001, -78.140); transform-origin: 0 0; }
+.cart-hscroll::-webkit-scrollbar { display: none; }

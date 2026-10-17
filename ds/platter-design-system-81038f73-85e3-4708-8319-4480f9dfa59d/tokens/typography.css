@@ -1,0 +1,38 @@
+/* Platter type scale — transcribed from PDS-V1 › Typography (revised board, which sets Fraunces as the display serif). */
+:root{
+--font-display:"Fraunces",Georgia,"Times New Roman",serif;
+--font-sans:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--font-body:var(--font-sans);
+
+--weight-regular:400;
+--weight-medium:500;
+--weight-semibold:600;
+--weight-bold:700;
+--weight-extrabold:800;
+
+/* Headings — XX Large…Large are Fraunces; Medium and below are Plus Jakarta Sans */
+--heading-xxl-size:28px;   --heading-xxl-lh:36px;   /* hero headlines, page titles */
+--heading-xl-size:24px;    --heading-xl-lh:32px;    /* section headers */
+--heading-l-size:20px;     --heading-l-lh:28px;     /* subsection */
+--heading-m-size:16px;     --heading-m-lh:24px;     /* in-page / form headers */
+--heading-s-size:14px;     --heading-s-lh:20px;     /* inline */
+--heading-xs-size:10px;    --heading-xs-lh:16px;    /* OVERLINE, uppercase */
+
+/* Body */
+--body-primary-size:16px;  --body-primary-lh:24px;
+--body-secondary-size:14px;--body-secondary-lh:20px;
+--body-tertiary-size:12px; --body-tertiary-lh:20px;
+--body-price-size:20px;    --body-price-lh:28px;
+--body-description-size:14px;--body-description-lh:20px;
+
+/* Labels */
+--label-primary-size:16px; --label-primary-lh:24px;  /* CTA buttons, tab labels */
+--label-secondary-size:14px;--label-secondary-lh:20px;/* field labels, filters */
+--label-tertiary-size:12px;--label-tertiary-lh:16px; /* chips, dropdown items */
+--label-badge-size:20px;   --label-badge-lh:28px;    /* uppercase badge identifiers */
+
+/* Captions */
+--caption-primary-size:12px;  --caption-primary-lh:20px;
+--caption-secondary-size:10px;--caption-secondary-lh:16px;
+--caption-meta-size:12px;     --caption-meta-lh:16px;
+}

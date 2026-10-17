@@ -1,0 +1,18 @@
+/* Grocery PDP theme — 2026-09-30. Every PDP now uses the Home & Lifestyle layout; grocery keeps
+   FirstClub green (decision recorded 2026-09-30). This scope re-points the layout's --hl-* colour
+   tokens at existing Platter semantic tokens — no new values. Navy stays on Home & Lifestyle
+   shapes (data-pdp-theme="lifestyle"). FINDING: the Filter band and plate-badge gradients are
+   composed from brand tints here; the file only draws them in blue. */
+[data-pdp-theme="grocery"]{
+--hl-brand:var(--surface-brand);
+--hl-link:var(--text-brand);
+--hl-verified-ink:var(--surface-dark);
+--hl-mark:var(--text-success);
+--hl-verified-surface:var(--surface-brand-subtle);
+--hl-verified-ring:var(--surface-brand-light);
+--hl-details-to:var(--surface-brand-light);
+--hl-plate-badge-to:var(--surface-brand-light);
+--hl-plate-badge-ring:var(--border-brand);
+--hl-filter-ground:linear-gradient(180deg,transparent 0%,var(--surface-brand-subtle) 64%),linear-gradient(var(--hl-page-warm),var(--hl-page-warm)); /* @kind color */
+--hl-filter-card:linear-gradient(180deg,var(--surface-brand-subtle) 0%,var(--surface-brand-light) 100%); /* @kind color */
+}

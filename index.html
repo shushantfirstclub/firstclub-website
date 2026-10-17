@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/tokens/fonts.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/tokens/colors.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/tokens/typography.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/tokens/spacing.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/tokens/radii.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/tokens/device.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/tokens/effects.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/components/cart/fig-assets.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/components/catalog/fig-assets.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/components/orders/fig-assets.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/components/cart-animation/fig-assets.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/components/primitives/fig-assets.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/components/aisles/fig-assets.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/components/product-card/fig-assets.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/components/plp/fig-assets.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/tokens/sheet.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/tokens/theme-home-lifestyle.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/tokens/theme-grocery-pdp.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/tokens/theme-home.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/tokens/theme-order-tracking.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/components/pdp-lifestyle/fig-assets.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/components/pdp/fig-tokens.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/components/pdp/fig-typography.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/components/pdp/fig-assets.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/components/cart-system/fig-assets.css">
+<link rel="stylesheet" href="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/styles.css">
+<script src="ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/_ds_bundle.js"></script>
+<style>
+@font-face{font-family:"Fraunces 72pt Soft";src:url("ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/assets/fonts/Fraunces-Variable.ttf") format("truetype-variations");font-weight:100 900;font-style:normal}
+@font-face{font-family:"Fraunces 72pt Soft";src:url("ds/platter-design-system-81038f73-85e3-4708-8319-4480f9dfa59d/assets/fonts/Fraunces-Italic-Variable.ttf") format("truetype-variations");font-weight:100 900;font-style:italic}
+html,body{margin:0;background:#FCF7ED}*{box-sizing:border-box}
+[style*="Fraunces 72pt Soft"]{font-variation-settings:"opsz" 72,"SOFT" 50,"WONK" 0}
+@keyframes fc-kb{from{transform:scale(1)}to{transform:scale(1.08)}}
+@keyframes fc-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes fc-tick{from{stroke-dashoffset:36}to{stroke-dashoffset:0}}
+@keyframes fc-pop{0%{transform:scale(.4);opacity:0}70%{transform:scale(1.06);opacity:1}100%{transform:scale(1)}}
+@keyframes fc-ring{from{box-shadow:0 0 0 0 var(--color-avocado-whip)}to{box-shadow:0 0 0 10px var(--color-avocado-whip)}}
+@keyframes fc-bag{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-10px) rotate(2deg)}}
+@keyframes fc-dm{0%,100%{transform:rotate(45deg) scale(1)}50%{transform:rotate(45deg) scale(1.35)}}
+@keyframes fc-drift{from{background-position:0% 50%}to{background-position:100% 50%}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+a{color:#044123;text-decoration:none}a:hover{color:#00271A}
+</style>
+</helmet>
+<div style="min-height:100vh;background:var(--color-chalk-line);display:flex;justify-content:safe center"><div data-screen-label="Creator Circle responsive" style="flex:0 0 auto;width:{{ frameW }};max-width:none;container-type:inline-size;min-height:100vh;background:var(--color-cashew-cream);font-family:'Plus Jakarta Sans',sans-serif;color:var(--color-black-coffee);overflow-x:clip">
+
+  <header style="position:sticky;top:0;z-index:20;padding:clamp(12px,2cqw,24px) clamp(16px,5.5cqw,80px) 0;background:{{ headerBg }}">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:clamp(64px,6.4cqw,92px);padding:8px clamp(16px,3cqw,40px);border-radius:clamp(16px,1.7cqw,24px);background:var(--color-toasted-cashew);box-shadow:inset 0 0 0 1px var(--color-avocado-skin)">
+      <a href="FirstClub%20Homepage%20Responsive.dc.html" style="display:flex;align-items:center;color:var(--color-avocado-skin)"><span role="img" aria-label="FirstClub" style="display:block;width:clamp(120px,11.5cqw,164px);aspect-ratio:776/112;background:var(--color-avocado-skin);-webkit-mask:url('assets/mobile/Footer_Logo.png') center / contain no-repeat;mask:url('assets/mobile/Footer_Logo.png') center / contain no-repeat"></span></a>
+      <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+        <nav style="display:flex;gap:clamp(20px,2.8cqw,40px);align-items:center">
+          <a href="FirstClub%20Homepage%20Responsive.dc.html" style="font-weight:500;font-size:clamp(15px,1.25cqw,18px);line-height:24px;color:var(--color-charcoal)">Home</a>
+          <a href="FirstClub%20About%20Us%20Responsive.dc.html" style="font-weight:500;font-size:clamp(15px,1.25cqw,18px);line-height:24px;color:var(--color-charcoal)">About Us</a>
+          <a href="FirstClub%20Banned%20Ingredients%20Responsive.dc.html" style="font-weight:500;font-size:clamp(15px,1.25cqw,18px);line-height:24px;color:var(--color-charcoal)">Banned Ingredients</a>
+          <a href="FirstClub%20Partner%20With%20Us%20Responsive.dc.html" style="font-weight:500;font-size:clamp(15px,1.25cqw,18px);line-height:24px;color:var(--color-charcoal)">Brand Partnership</a>
+        </nav>
+        <x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Button" type="primary" size="56" full-width="{{ false }}" hint-size="174px,56px">Download App</x-import>
+      </sc-if>
+      <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+        <button onClick="{{ toggleMenu }}" aria-label="Menu" style="width:44px;height:44px;border:0;border-radius:22px;background:transparent;color:var(--color-avocado-skin);display:grid;place-items:center;cursor:pointer">
+          <x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="{{ menuIcon }}" size="{{ 24 }}" hint-size="24px,24px"></x-import>
+        </button>
+      </sc-if>
+    </div>
+    <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+      <nav style="margin-top:8px;padding:8px;border-radius:16px;background:var(--color-pure-white);box-shadow:inset 0 0 0 1px var(--color-chalk-line);display:flex;flex-direction:column">
+        <a href="FirstClub%20Homepage%20Responsive.dc.html" style="padding:12px 16px;font-weight:600;font-size:16px;color:var(--color-black-coffee)">Home</a>
+        <a href="FirstClub%20About%20Us%20Responsive.dc.html" style="padding:12px 16px;font-weight:600;font-size:16px;color:var(--color-black-coffee)">About Us</a>
+        <a href="FirstClub%20Banned%20Ingredients%20Responsive.dc.html" style="padding:12px 16px;font-weight:600;font-size:16px;color:var(--color-black-coffee)">Banned Ingredients</a>
+        <a href="FirstClub%20Partner%20With%20Us%20Responsive.dc.html" style="padding:12px 16px;font-weight:600;font-size:16px;color:var(--color-black-coffee)">Brand Partnership</a>
+        <div style="padding:8px">
+          <x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Button" type="primary" size="48" full-width="{{ true }}" hint-size="100%,48px">Get the App</x-import>
+        </div>
+      </nav>
+    </sc-if>
+  </header>
+
+  <section data-screen-label="Creator hero" ref="{{ heroRef }}" onTouchStart="{{ heroTouchStart }}" onTouchEnd="{{ heroTouchEnd }}" style="position:relative;margin-top:calc(-1 * (clamp(12px,2cqw,24px) + clamp(64px,6.4cqw,92px)));min-height:{{ heroMinH }};display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;border-radius:0 0 clamp(28px,3cqw,48px) clamp(28px,3cqw,48px);padding:calc((clamp(12px,2cqw,24px) + clamp(64px,6.4cqw,92px)) + 48px) clamp(16px,5.5cqw,80px) clamp(32px,3.4cqw,56px)">
+    <sc-for list="{{ heroSlides }}" as="hs" hint-placeholder-count="4">
+      <img src="{{ hs.src }}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:{{ hs.pos }};display:block;opacity:{{ hs.op }};transition:opacity 1600ms cubic-bezier(.4,0,.2,1);animation:fc-kb 14s ease-in-out infinite alternate;animation-delay:{{ hs.ad }}">
+    </sc-for>
+    <div aria-hidden="true" style="position:absolute;inset:0;background:rgba(0,39,26,.58)"></div>
+    <div data-rv="" style="position:relative;display:flex;flex-direction:column;gap:clamp(20px,2.2cqw,32px);max-width:1040px">
+      <span style="display:inline-flex;align-items:center;gap:12px;font-weight:700;font-size:13px;letter-spacing:.5px;color:var(--color-avocado-whip)">FIRSTCLUB CREATOR CIRCLE</span>
+      <h1 style="margin:0;font-family:'Fraunces 72pt Soft',serif;font-weight:600;font-size:{{ heroH1 }};line-height:1.04;letter-spacing:-.01em;color:var(--color-pure-white);text-wrap:balance">Your <em style="font-weight:700;color:var(--color-avocado-whip)">Finds</em><span aria-hidden="true" style="display:inline-block;width:.18em;height:.18em;margin:0 .38em;background:var(--color-chili);transform:rotate(45deg);vertical-align:.2em"></span>Your <em style="font-weight:700;color:var(--color-avocado-whip)">Voice</em><span aria-hidden="true" style="display:inline-block;width:.18em;height:.18em;margin:0 .38em;background:var(--color-chili);transform:rotate(45deg);vertical-align:.2em"></span><span style="white-space:{{ heroNowrap }}">Your <em style="font-weight:700;color:var(--color-avocado-whip)">Rewards</em></span></h1>
+      <p style="margin:0;max-width:560px;font-size:{{ heroP }};line-height:1.5;font-weight:500;color:var(--color-cashew-cream)">Share the groceries you trust with the people who trust you. Get hampers to try, a code to share and commission on every order it brings in.</p>
+      <div style="display:flex;flex-wrap:nowrap;flex-direction:{{ heroBtnDir }};gap:{{ heroBtnGap }};margin-top:4px"><a href="#apply" style-hover="filter:brightness(1.15)" style-active="transform:scale(.97)" style="transition:transform 120ms cubic-bezier(.2,0,.2,1),filter 180ms cubic-bezier(.2,0,.2,1),box-shadow 180ms cubic-bezier(.2,0,.2,1),background-color 180ms cubic-bezier(.2,0,.2,1);height:56px;padding:0 28px;border-radius:28px;background:var(--color-pure-white);color:var(--color-avocado-skin);display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:16px;">Apply now<x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="arrow_forward" size="{{ 20 }}" hint-size="20px,20px"></x-import></a><a href="#how" style="height:56px;padding:0 28px;border-radius:28px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.55);color:var(--color-pure-white);display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:16px;transition:background 180ms cubic-bezier(.2,0,.2,1)" style-hover="background:rgba(255,255,255,.12)">How it works</a></div>
+    </div>
+    <div style="position:absolute;right:clamp(16px,5.5cqw,80px);bottom:{{ dotsBottom }};top:{{ dotsTop }};display:flex;gap:8px;z-index:2">
+      <sc-for list="{{ heroSlides }}" as="hd" hint-placeholder-count="4">
+        <button onClick="{{ hd.go }}" aria-label="{{ hd.label }}" style="width:{{ hd.dw }};height:8px;border:0;padding:0;border-radius:4px;background:{{ hd.dc }};cursor:pointer;transition:width 280ms cubic-bezier(0,0,.2,1),background 280ms cubic-bezier(0,0,.2,1)"></button>
+      </sc-for>
+    </div>
+    <sc-if value="{{ notMob }}" hint-placeholder-val="{{ true }}">
+    <div data-rv="" data-rv-d="200" style="position:relative;margin-top:clamp(40px,5cqw,80px);margin-right:clamp(0px,8cqw,120px);padding-top:clamp(20px,2cqw,28px);border-top:1px solid rgba(255,255,255,.28);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:20px clamp(24px,4cqw,64px)">
+      <sc-for list="{{ heroStats }}" as="h" hint-placeholder-count="3">
+        <div style="display:flex;flex-direction:column;gap:4px;color:var(--color-pure-white)"><span style="font-family:'Fraunces 72pt Soft',serif;font-weight:600;font-size:clamp(26px,2.4cqw,36px);line-height:1.1">{{ h.v }}</span><span style="font-size:14px;line-height:20px;color:var(--color-avocado-whip)">{{ h.l }}</span></div>
+      </sc-for>
+    </div>
+    </sc-if>
+  </section>
+
+  <section data-screen-label="Creators" style="padding:{{ secPadY }} clamp(16px,5.5cqw,80px);display:grid;grid-template-columns:{{ crCols }};gap:{{ crGap }};align-items:center;max-width:1280px;margin:0 auto;width:100%">
+    <div data-rv="" style="position:relative;justify-self:center;width:100%;max-width:{{ reelMax }}">
+      <div style="position:relative;width:100%;aspect-ratio:9/16;border-radius:36px;overflow:hidden;background:var(--color-almond-milk);box-shadow:0 0 0 8px var(--color-pure-white)">
+        <sc-if value="{{ hasMp4 }}" hint-placeholder-val="{{ false }}">
+          <video ref="{{ vidRef }}" src="{{ reelSrc }}" poster="assets/creator/reel.jpg" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" aria-label="A FirstClub creator reel" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"></video>
+          <button onClick="{{ toggleMute }}" aria-label="{{ muteLabel }}" aria-pressed="{{ soundOn }}" style-hover="transform:scale(1.06)" style-active="transform:scale(.94)" style="transition:transform 120ms cubic-bezier(.2,0,.2,1),filter 180ms cubic-bezier(.2,0,.2,1),box-shadow 180ms cubic-bezier(.2,0,.2,1),background-color 180ms cubic-bezier(.2,0,.2,1);position:absolute;right:14px;bottom:14px;width:44px;height:44px;border:0;border-radius:22px;background:rgba(0,39,26,.72);color:var(--color-pure-white);display:grid;place-items:center;cursor:pointer;">
+            <x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="{{ muteIcon }}" filled="{{ true }}" size="{{ 22 }}" hint-size="22px,22px"></x-import>
+          </button>
+        </sc-if>
+        <sc-if value="{{ noMp4 }}" hint-placeholder-val="{{ true }}">
+          <iframe src="https://assets.pinterest.com/ext/embed.html?id=114208540542678356" title="FirstClub creator reel" scrolling="no" frameborder="0" allow="autoplay; encrypted-media" style="position:absolute;left:0;top:0;width:100%;height:calc(100% + 40px);border:0;display:block;background:var(--color-almond-milk)"></iframe>
+        </sc-if>
+      </div>
+    </div>
+    <div data-rv="" data-rv-d="120" style="display:flex;flex-direction:column;align-items:{{ crAlign }};text-align:{{ crText }};gap:{{ crTxtGap }}">
+      <span style="display:inline-flex;align-items:center;gap:12px;font-weight:700;font-size:13px;letter-spacing:.5px;color:var(--color-green-pea)">THE CIRCLE TODAY</span>
+      <span ref="{{ countRef }}" style="font-family:'Fraunces 72pt Soft',serif;font-weight:600;font-size:{{ countSize }};line-height:.9;letter-spacing:-.03em;color:var(--color-avocado-skin);font-variant-numeric:tabular-nums">1500+</span>
+      <h2 style="margin:0;font-family:'Fraunces 72pt Soft',serif;font-weight:600;font-size:{{ crH2 }};line-height:1.15;text-wrap:balance">Creators have already joined <em style="font-weight:700;color:var(--color-avocado-skin)">the circle</em></h2>
+      <p style="margin:0;max-width:440px;font-size:{{ bodyP }};line-height:1.6;color:var(--color-charcoal)">Home cooks, new parents, fitness folks and everyday food lovers. All sharing groceries they have tried, tasted and stand by.</p>
+      <div style="margin-top:{{ crBtnMt }};width:{{ crBtnW }}"><a href="#apply" style-hover="filter:brightness(1.15)" style-active="transform:scale(.97)" style="transition:transform 120ms cubic-bezier(.2,0,.2,1),filter 180ms cubic-bezier(.2,0,.2,1),box-shadow 180ms cubic-bezier(.2,0,.2,1),background-color 180ms cubic-bezier(.2,0,.2,1);height:56px;padding:0 28px;border-radius:28px;background:var(--color-avocado-skin);color:var(--color-pure-white);display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:16px;">Apply now<x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="arrow_forward" size="{{ 20 }}" hint-size="20px,20px"></x-import></a></div>
+    </div>
+  </section>
+
+  <section data-screen-label="How it works" id="how" style="padding:0 clamp(16px,5.5cqw,80px) {{ secPadY }};scroll-margin-top:120px;max-width:1280px;margin:0 auto;width:100%">
+    <div data-rv="" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 48px;padding-bottom:clamp(32px,4cqw,56px)">
+      <h2 style="margin:0;font-family:'Fraunces 72pt Soft',serif;font-weight:600;font-size:{{ secH2 }};line-height:1.05">How it <em style="font-weight:700;color:var(--color-avocado-skin)">works</em></h2>
+    </div>
+    <div data-rv="" style="border-radius:clamp(24px,2.6cqw,36px);background:linear-gradient(180deg,var(--color-avocado-mist) 0%,var(--color-pure-white) 75%);box-shadow:inset 0 0 0 1px var(--color-chalk-line);padding:{{ hwPanelPad }}">
+    <ol ref="{{ hwRef }}" style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:{{ hwCols }}">
+      <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
+        <li onMouseEnter="{{ st.pick }}" onClick="{{ st.pick }}" style="position:relative;display:flex;flex-direction:{{ hwDir }};gap:{{ hwGap }};padding:{{ hwItemPad }};min-width:0;cursor:default">
+          <div style="flex:none;display:flex;flex-direction:{{ hwRailDir }};align-items:center;gap:{{ hwRailGap }}">
+            <span style="flex:none;width:48px;height:48px;border-radius:24px;display:grid;place-items:center;background:{{ st.nodeBg }};color:{{ st.nodeFg }};box-shadow:inset 0 0 0 1px {{ st.nodeRing }};transition:background-color 280ms cubic-bezier(0,0,.2,1),color 280ms cubic-bezier(0,0,.2,1)"><x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="{{ st.icon }}" filled="{{ true }}" size="{{ 24 }}" hint-size="24px,24px"></x-import></span>
+            <sc-if value="{{ st.hasLine }}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="position:relative;flex:1;width:{{ hwLineW }};height:{{ hwLineH }};min-width:2px;min-height:2px;border-radius:1px;background:var(--color-chalk-line);overflow:hidden"><span style="position:absolute;left:0;top:0;width:{{ st.fillW }};height:{{ st.fillH }};background:var(--color-avocado-skin);transition:{{ st.fillT }}"></span></span></sc-if>
+          </div>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:6px;padding:{{ hwTextPad }}">
+            <span style="font-weight:700;font-size:12px;letter-spacing:.8px;color:{{ st.lbl }};transition:color 280ms cubic-bezier(0,0,.2,1)">STEP {{ st.no }}</span>
+            <h3 style="margin:0;font-family:'Fraunces 72pt Soft',serif;font-weight:700;font-size:{{ hwTitle }};line-height:1.15;color:var(--color-black-coffee)">{{ st.title }}</h3>
+            <p style="margin:4px 0 0;max-width:260px;font-size:15px;line-height:1.55;color:var(--color-charcoal)">{{ st.text }}</p>
+          </div>
+        </li>
+      </sc-for>
+    </ol>
+    </div>  </section>
+
+  <section data-screen-label="Bring and gives" style="padding:0 clamp(16px,5.5cqw,80px) {{ secPadY }};max-width:1280px;margin:0 auto;width:100%;display:flex;flex-direction:column;gap:clamp(32px,4cqw,64px)">
+    <div data-rv="" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px">
+      <span style="display:inline-flex;align-items:center;gap:12px;font-weight:700;font-size:13px;letter-spacing:.5px;color:var(--color-green-pea)">THE EXCHANGE</span>
+      <h2 style="margin:0;font-family:'Fraunces 72pt Soft',serif;font-weight:600;font-size:{{ secH2 }};line-height:1.08;text-wrap:balance">You bring the voice. <em style="font-weight:700;color:var(--color-avocado-skin)">We bring the rest.</em></h2>
+      <p style="margin:0;max-width:520px;font-size:{{ bodyP }};line-height:1.6;color:var(--color-charcoal)">What we look for, and what you get once you are in.</p>
+    </div>
+    <sc-if value="{{ mob }}" hint-placeholder-val="{{ false }}">
+      <div role="tablist" style="align-self:center;display:flex;gap:4px;padding:4px;border-radius:28px;background:var(--color-pure-white);box-shadow:inset 0 0 0 1px var(--color-chalk-line);margin-bottom:-8px">
+        <sc-for list="{{ bgTabs }}" as="t" hint-placeholder-count="2">
+          <button role="tab" aria-selected="{{ t.on }}" onClick="{{ t.pick }}" style-active="transform:scale(.97)" style="transition:transform 120ms cubic-bezier(.2,0,.2,1),filter 180ms cubic-bezier(.2,0,.2,1),box-shadow 180ms cubic-bezier(.2,0,.2,1),background-color 180ms cubic-bezier(.2,0,.2,1);height:44px;padding:0 20px;border:0;border-radius:22px;background:{{ t.bg }};color:{{ t.fg }};font:inherit;font-weight:700;font-size:14px;display:flex;align-items:center;gap:8px;cursor:pointer;"><x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="{{ t.icon }}" filled="{{ true }}" size="{{ 18 }}" hint-size="18px,18px"></x-import>{{ t.label }}</button>
+        </sc-for>
+      </div>
+    </sc-if>
+    <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(16px,1.9cqw,28px);align-items:stretch">
+      <sc-if value="{{ showBring }}" hint-placeholder-val="{{ true }}"><div data-rv="" style="border-radius:clamp(28px,3cqw,40px);background:var(--color-pure-white);box-shadow:inset 0 0 0 1px var(--color-chalk-line);padding:{{ cardPad }};display:flex;flex-direction:column;gap:clamp(24px,2.8cqw,36px)">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span style="font-weight:700;font-size:13px;letter-spacing:.5px;color:var(--color-charcoal)">YOU BRING</span>
+            <h3 style="margin:0;font-family:'Fraunces 72pt Soft',serif;font-weight:600;font-size:{{ bgH3 }};line-height:1.1;text-wrap:balance">What you bring to <em style="font-weight:700;color:var(--color-avocado-skin);white-space:nowrap">The Circle</em></h3>
+          </div>
+          <span style="flex:none;width:{{ bgTile }};height:{{ bgTile }};border-radius:16px;background:var(--color-avocado-whip);color:var(--color-avocado-skin);display:grid;place-items:center"><x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="photo_camera" filled="{{ true }}" size="{{ 28 }}" hint-size="28px,28px"></x-import></span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <sc-for list="{{ bring }}" as="b" hint-placeholder-count="4">
+            <div data-rv="" data-rv-d="{{ $index }}00" style="display:flex;align-items:center;gap:16px;border-radius:16px;background:var(--color-cashew-cream);padding:{{ bgItemPad }};font-size:{{ bgItemFs }};line-height:1.4;font-weight:500;transition:transform 180ms cubic-bezier(.2,0,.2,1)" style-hover="transform:translateX(4px)">
+              <span style="flex:none;width:32px;height:32px;border-radius:16px;background:var(--color-avocado-skin);color:var(--color-pure-white);display:grid;place-items:center"><x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="check" size="{{ 18 }}" hint-size="18px,18px"></x-import></span>
+              <span>{{ b }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div></sc-if>
+      <sc-if value="{{ showGives }}" hint-placeholder-val="{{ true }}"><div data-rv="" data-rv-d="120" style="position:relative;overflow:hidden;border-radius:clamp(28px,3cqw,40px);background:linear-gradient(160deg,var(--color-avocado-skin) 0%,var(--color-avocado-pit) 100%);color:var(--color-pure-white);padding:{{ cardPad }};display:flex;flex-direction:column;gap:clamp(24px,2.8cqw,36px)">
+        <div aria-hidden="true" style="position:absolute;inset:0;background:url('assets/desktop/Footer_pattern.png') 0% 100% / 160% auto repeat-x;opacity:.06;pointer-events:none"></div>
+        <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:16px">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span style="font-weight:700;font-size:13px;letter-spacing:.5px;color:var(--color-avocado-whip)">YOU GET</span>
+            <h3 style="margin:0;font-family:'Fraunces 72pt Soft',serif;font-weight:600;font-size:{{ bgH3 }};line-height:1.1;text-wrap:balance;color:var(--color-cashew-cream)">What <em style="font-weight:700;color:var(--color-avocado-whip);white-space:nowrap">The Circle</em> gives you</h3>
+          </div>
+          <span style="flex:none;width:{{ bgTile }};height:{{ bgTile }};border-radius:16px;background:var(--color-avocado-whip);color:var(--color-avocado-skin);display:grid;place-items:center"><x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="redeem" filled="{{ true }}" size="{{ 28 }}" hint-size="28px,28px"></x-import></span>
+        </div>
+        <div style="position:relative;display:flex;flex-direction:column;gap:10px">
+          <sc-for list="{{ gives }}" as="g" hint-placeholder-count="3">
+            <div data-rv="" data-rv-d="{{ $index }}00" style="display:flex;align-items:flex-start;gap:16px;border-radius:16px;background:var(--color-avocado-pit);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);padding:{{ bgItemPad }};transition:transform 180ms cubic-bezier(.2,0,.2,1)" style-hover="transform:translateX(4px)">
+              <span style="flex:none;width:44px;height:44px;border-radius:14px;background:var(--color-avocado-whip);color:var(--color-avocado-skin);display:grid;place-items:center"><x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="{{ g.icon }}" filled="{{ true }}" size="{{ 24 }}" hint-size="24px,24px"></x-import></span>
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <h4 style="margin:0;font-family:'Fraunces 72pt Soft',serif;font-weight:700;font-size:{{ bgH4 }};line-height:1.2">{{ g.title }}</h4>
+                <p style="margin:0;font-size:{{ bgSmFs }};line-height:1.55;color:var(--color-avocado-whip)">{{ g.text }}</p>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div></sc-if>
+      <span aria-hidden="true" style="position:absolute;left:50%;top:50%;width:52px;height:52px;margin:-26px 0 0 -26px;border-radius:26px;background:var(--color-pure-white);color:var(--color-avocado-skin);display:grid;place-items:center;box-shadow:0 0 0 6px var(--color-cashew-cream);z-index:2;pointer-events:none;display:none"><x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="sync_alt" size="{{ 26 }}" hint-size="26px,26px"></x-import></span>
+    </div>
+  </section>
+
+  <section data-screen-label="Apply" id="apply" style="padding:0 clamp(16px,5.5cqw,80px) {{ secPadY }};scroll-margin-top:120px">
+    <div data-rv="" style="position:relative;overflow:hidden;border-radius:clamp(28px,3cqw,48px);background:linear-gradient(160deg,var(--color-avocado-skin) 0%,var(--color-avocado-pit) 100%);padding:{{ applyPad }};display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:{{ applyGap }};align-items:stretch">
+      <div aria-hidden="true" style="position:absolute;inset:0;background:url('assets/desktop/Footer_pattern.png') 0% 100% / 160% auto repeat-x;opacity:.05;pointer-events:none"></div>
+      <div style="position:relative;display:flex;flex-direction:column;gap:{{ applyColGap }};color:var(--color-pure-white);padding:{{ applyColPad }}">
+        <span style="display:inline-flex;align-items:center;gap:12px;font-weight:700;font-size:13px;letter-spacing:.5px;color:var(--color-avocado-whip)">APPLY</span>
+        <h2 style="margin:0;font-family:'Fraunces 72pt Soft',serif;font-weight:600;font-size:{{ applyH }};line-height:1.04;text-wrap:balance">Join the FirstClub <em style="font-weight:700;color:var(--color-avocado-whip)">Creator Circle</em></h2>
+        <p style="margin:0;max-width:420px;font-size:{{ applyP }};line-height:1.55;color:var(--color-avocado-whip)">A few details about you and your channel. We take it from there.</p>
+        <sc-if value="{{ mob }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:2px">
+            <sc-for list="{{ applyNotes }}" as="n" hint-placeholder-count="3">
+              <span style="display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px 0 8px;border-radius:16px;background:var(--color-avocado-pit);font-size:13px;font-weight:600;color:var(--color-cashew-cream)"><x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="{{ n.icon }}" filled="{{ true }}" size="{{ 16 }}" hint-size="16px,16px"></x-import>{{ n.s }}</span>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ notMob }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top:{{ tlTop }};display:flex;flex-direction:column;gap:{{ tlGap }}">
+          <span style="font-weight:700;font-size:12px;letter-spacing:2px;color:var(--color-avocado-whip)">WHAT HAPPENS NEXT</span>
+          <div style="position:relative;display:flex;flex-direction:column;gap:0">
+            <span aria-hidden="true" style="position:absolute;left:{{ tlLine }};top:28px;bottom:28px;width:2px;background:repeating-linear-gradient(to bottom,rgba(255,255,255,.35) 0 6px,transparent 6px 12px)"></span>
+            <sc-for list="{{ applyNotes }}" as="n" hint-placeholder-count="3">
+              <div data-rv="" data-rv-d="{{ $index }}00" style="position:relative;display:flex;align-items:flex-start;gap:{{ tlItemGap }};padding:{{ tlItemPad }}">
+                <span style="flex:none;width:{{ tlDot }};height:{{ tlDot }};border-radius:24px;background:var(--color-avocado-whip);color:var(--color-avocado-skin);display:grid;place-items:center;box-shadow:0 0 0 6px var(--color-avocado-skin)"><x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="{{ n.icon }}" filled="{{ true }}" size="{{ 24 }}" hint-size="24px,24px"></x-import></span>
+                <div style="display:flex;flex-direction:column;gap:4px;padding-top:2px">
+                  <span style="font-family:'Fraunces 72pt Soft',serif;font-weight:700;font-size:{{ tlH }};line-height:1.2;color:var(--color-pure-white)">{{ n.h }}</span>
+                  <span style="font-size:15px;line-height:1.5;color:var(--color-avocado-whip)">{{ n.t }}</span>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        </sc-if>
+        <sc-if value="{{ notMob }}" hint-placeholder-val="{{ true }}"><div style="margin-top:auto;display:flex;align-items:center;gap:16px;border-radius:24px;background:var(--color-avocado-pit);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);padding:18px 20px">
+          <span style="flex:none;width:44px;height:44px;border-radius:14px;background:var(--color-pure-white);color:var(--color-avocado-skin);display:grid;place-items:center"><x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="groups" filled="{{ true }}" size="{{ 24 }}" hint-size="24px,24px"></x-import></span>
+          <span style="font-size:15px;line-height:1.45;color:var(--color-cashew-cream)"><b style="color:var(--color-pure-white)">1500+ creators</b> have already joined</span>
+        </div></sc-if>
+      </div>
+      <div style="position:relative;border-radius:clamp(20px,2.2cqw,32px);background:var(--color-cashew-cream);padding:{{ formPad }}">
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <div role="status" ref="{{ confRef }}" style="position:relative;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:16px;padding:48px 0">
+            <span style="width:80px;height:80px;border-radius:40px;background:var(--color-avocado-skin);color:var(--color-pure-white);display:grid;place-items:center;box-shadow:0 0 0 10px var(--color-avocado-whip);animation:fc-pop 420ms cubic-bezier(0,0,.2,1) both,fc-ring 420ms 240ms cubic-bezier(0,0,.2,1) both">{{ tickSvg }}</span>
+            <h3 style="margin:16px 0 0;font-family:'Fraunces 72pt Soft',serif;font-weight:700;font-size:clamp(24px,2.4cqw,32px);color:var(--color-avocado-skin)">Application received</h3>
+            <p style="margin:0;max-width:340px;font-size:16px;line-height:24px;color:var(--color-charcoal)">Thank you. We will review it and email you with next steps.</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+          <form ref="{{ formRef }}" noValidate="{{ true }}" onSubmit="{{ submit }}" onInput="{{ clearErr }}" onChange="{{ clearErr }}" style="display:flex;flex-direction:column;gap:{{ formGap }}">
+            <sc-if value="{{ mob }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;flex-direction:column;gap:10px">
+                <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-family:'Fraunces 72pt Soft',serif;font-weight:700;font-size:20px;color:var(--color-avocado-skin)">{{ stepTitle }}</span><span style="font-weight:700;font-size:12px;letter-spacing:1.5px;color:var(--color-charcoal)">STEP {{ stepNo }} OF 3</span></div>
+                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px"><sc-for list="{{ stepBars }}" as="sb" hint-placeholder-count="3"><span style="height:6px;border-radius:3px;background:{{ sb }};transition:background 280ms cubic-bezier(0,0,.2,1)"></span></sc-for></div>
+              </div>
+            </sc-if>
+            
+            <div style="display:{{ fgD0 }}"><div style="display:flex;flex-direction:column;gap:16px">
+              <div style="display:flex;align-items:center;gap:12px"><span style="width:28px;height:28px;border-radius:14px;background:var(--color-avocado-skin);color:var(--color-pure-white);display:grid;place-items:center;font-weight:700;font-size:13px">1</span><span style="font-family:'Fraunces 72pt Soft',serif;font-weight:700;font-size:20px;color:var(--color-avocado-skin)">About you</span><span aria-hidden="true" style="flex:1;height:1px;background:var(--color-chalk-line)"></span></div>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:{{ fieldGap }}">
+                <sc-for list="{{ fieldsA }}" as="f" hint-placeholder-count="4">
+              <label style="display:flex;flex-direction:column;gap:8px;font-weight:600;font-size:13px;line-height:18px;color:var(--color-black-coffee);grid-column:{{ f.span }}">
+                <span style="display:flex;justify-content:space-between;gap:8px">{{ f.label }}<span style="font-weight:500;color:var(--color-charcoal)">{{ f.opt }}</span></span>
+                <span style="display:flex;align-items:center;height:52px;border-radius:14px;background:var(--color-pure-white);box-shadow:inset 0 0 0 {{ f.ringW }} {{ f.ring }};padding:0 16px;gap:10px;transition:box-shadow 180ms cubic-bezier(.2,0,.2,1)" style-focus-within="box-shadow:inset 0 0 0 1.5px var(--color-avocado-skin)">
+                  <span style="display:flex;align-items:center;gap:6px;color:var(--color-charcoal);font-weight:600;font-size:15px"><x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="{{ f.icon }}" size="{{ 20 }}" hint-size="20px,20px"></x-import>{{ f.pre }}</span>
+                  <input name="{{ f.name }}" type="{{ f.type }}" inputMode="{{ f.im }}" maxLength="{{ f.max }}" aria-invalid="{{ f.bad }}" placeholder="{{ f.ph }}" style="caret-color:var(--color-avocado-skin);flex:1;min-width:0;height:100%;border:0;background:transparent;outline:none;font:inherit;font-weight:500;font-size:16px;color:var(--color-black-coffee)">
+                </span>
+                <span role="{{ f.role }}" style="font-weight:{{ f.msgW }};font-size:12px;line-height:16px;color:{{ f.msgC }}">{{ f.msg }}</span>
+              </label>
+                </sc-for>
+                
+              </div>
+            </div></div>
+            <div style="display:{{ fgD1 }}"><div style="display:flex;flex-direction:column;gap:16px">
+              <div style="display:flex;align-items:center;gap:12px"><span style="width:28px;height:28px;border-radius:14px;background:var(--color-avocado-skin);color:var(--color-pure-white);display:grid;place-items:center;font-weight:700;font-size:13px">2</span><span style="font-family:'Fraunces 72pt Soft',serif;font-weight:700;font-size:20px;color:var(--color-avocado-skin)">Your channels</span><span aria-hidden="true" style="flex:1;height:1px;background:var(--color-chalk-line)"></span></div>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:{{ fieldGap }}">
+                <sc-for list="{{ fieldsB }}" as="f" hint-placeholder-count="4">
+              <label style="display:flex;flex-direction:column;gap:8px;font-weight:600;font-size:13px;line-height:18px;color:var(--color-black-coffee);grid-column:{{ f.span }}">
+                <span style="display:flex;justify-content:space-between;gap:8px">{{ f.label }}<span style="font-weight:500;color:var(--color-charcoal)">{{ f.opt }}</span></span>
+                <span style="display:flex;align-items:center;height:52px;border-radius:14px;background:var(--color-pure-white);box-shadow:inset 0 0 0 {{ f.ringW }} {{ f.ring }};padding:0 16px;gap:10px;transition:box-shadow 180ms cubic-bezier(.2,0,.2,1)" style-focus-within="box-shadow:inset 0 0 0 1.5px var(--color-avocado-skin)">
+                  <span style="display:flex;align-items:center;gap:6px;color:var(--color-charcoal);font-weight:600;font-size:15px"><x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="{{ f.icon }}" size="{{ 20 }}" hint-size="20px,20px"></x-import>{{ f.pre }}</span>
+                  <input name="{{ f.name }}" type="{{ f.type }}" inputMode="{{ f.im }}" maxLength="{{ f.max }}" aria-invalid="{{ f.bad }}" placeholder="{{ f.ph }}" style="caret-color:var(--color-avocado-skin);flex:1;min-width:0;height:100%;border:0;background:transparent;outline:none;font:inherit;font-weight:500;font-size:16px;color:var(--color-black-coffee)">
+                </span>
+                <span role="{{ f.role }}" style="font-weight:{{ f.msgW }};font-size:12px;line-height:16px;color:{{ f.msgC }}">{{ f.msg }}</span>
+              </label>
+                </sc-for>
+                
+              </div>
+            </div></div>
+            <div style="display:{{ fgD2 }}"><div style="display:flex;flex-direction:column;gap:16px">
+              <div style="display:flex;align-items:center;gap:12px"><span style="width:28px;height:28px;border-radius:14px;background:var(--color-avocado-skin);color:var(--color-pure-white);display:grid;place-items:center;font-weight:700;font-size:13px">3</span><span style="font-family:'Fraunces 72pt Soft',serif;font-weight:700;font-size:20px;color:var(--color-avocado-skin)">Your FirstClub details</span><span aria-hidden="true" style="flex:1;height:1px;background:var(--color-chalk-line)"></span></div>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:{{ fieldGap }}">
+                <sc-for list="{{ fieldsC }}" as="f" hint-placeholder-count="4">
+              <label style="display:flex;flex-direction:column;gap:8px;font-weight:600;font-size:13px;line-height:18px;color:var(--color-black-coffee);grid-column:{{ f.span }}">
+                <span style="display:flex;justify-content:space-between;gap:8px">{{ f.label }}<span style="font-weight:500;color:var(--color-charcoal)">{{ f.opt }}</span></span>
+                <span style="display:flex;align-items:center;height:52px;border-radius:14px;background:var(--color-pure-white);box-shadow:inset 0 0 0 {{ f.ringW }} {{ f.ring }};padding:0 16px;gap:10px;transition:box-shadow 180ms cubic-bezier(.2,0,.2,1)" style-focus-within="box-shadow:inset 0 0 0 1.5px var(--color-avocado-skin)">
+                  <span style="display:flex;align-items:center;gap:6px;color:var(--color-charcoal);font-weight:600;font-size:15px"><x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="{{ f.icon }}" size="{{ 20 }}" hint-size="20px,20px"></x-import>{{ f.pre }}</span>
+                  <input name="{{ f.name }}" type="{{ f.type }}" inputMode="{{ f.im }}" maxLength="{{ f.max }}" aria-invalid="{{ f.bad }}" placeholder="{{ f.ph }}" style="caret-color:var(--color-avocado-skin);flex:1;min-width:0;height:100%;border:0;background:transparent;outline:none;font:inherit;font-weight:500;font-size:16px;color:var(--color-black-coffee)">
+                </span>
+                <span role="{{ f.role }}" style="font-weight:{{ f.msgW }};font-size:12px;line-height:16px;color:{{ f.msgC }}">{{ f.msg }}</span>
+              </label>
+                </sc-for>
+                <sc-for list="{{ selects }}" as="sl" hint-placeholder-count="2">
+                  <label style="display:flex;flex-direction:column;gap:8px;font-weight:600;font-size:13px;line-height:18px;color:var(--color-black-coffee)">{{ sl.label }}
+                    <span style="position:relative;display:flex;align-items:center">
+                      <select name="{{ sl.name }}" aria-invalid="{{ sl.bad }}" style="appearance:none;-webkit-appearance:none;width:100%;height:52px;border:0;border-radius:14px;background:var(--color-pure-white);box-shadow:inset 0 0 0 {{ sl.ringW }} {{ sl.ring }};padding:0 44px 0 16px;font:inherit;font-weight:500;font-size:16px;color:var(--color-black-coffee);cursor:pointer">
+                        <sc-for list="{{ sl.options }}" as="o" hint-placeholder-count="4"><option>{{ o }}</option></sc-for>
+                      </select>
+                      <span style="position:absolute;right:14px;pointer-events:none;color:var(--color-avocado-skin);display:flex"><x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="expand_more" size="{{ 22 }}" hint-size="22px,22px"></x-import></span>
+                    </span>
+                    <span role="alert" style="font-weight:600;font-size:12px;line-height:16px;color:var(--color-chili)">{{ sl.err }}</span>
+                  </label>
+                </sc-for>
+              </div>
+            </div></div>
+            <sc-if value="{{ showNav }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;gap:10px">
+                <sc-if value="{{ canBack }}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{ stepBack }}" aria-label="Back" style-active="transform:scale(.97)" style="transition:transform 120ms cubic-bezier(.2,0,.2,1),filter 180ms cubic-bezier(.2,0,.2,1),box-shadow 180ms cubic-bezier(.2,0,.2,1),background-color 180ms cubic-bezier(.2,0,.2,1);flex:none;width:56px;height:56px;border:0;border-radius:28px;background:var(--color-pure-white);box-shadow:inset 0 0 0 1px var(--color-chalk-line);color:var(--color-avocado-skin);display:grid;place-items:center;cursor:pointer"><x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="arrow_back" size="{{ 22 }}" hint-size="22px,22px"></x-import></button></sc-if>
+                <button type="button" onClick="{{ stepNext }}" style-hover="filter:brightness(1.15)" style-active="transform:scale(.97)" style="transition:transform 120ms cubic-bezier(.2,0,.2,1),filter 180ms cubic-bezier(.2,0,.2,1),box-shadow 180ms cubic-bezier(.2,0,.2,1),background-color 180ms cubic-bezier(.2,0,.2,1);flex:1;height:56px;border:0;border-radius:28px;background:var(--color-avocado-skin);color:var(--color-pure-white);font:inherit;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer">Continue<x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="arrow_forward" size="{{ 20 }}" hint-size="20px,20px"></x-import></button>
+              </div>
+            </sc-if>
+            <sc-if value="{{ showFinal }}" hint-placeholder-val="{{ true }}">
+              <div style="display:flex;flex-direction:column;gap:14px">
+            <div style="display:flex;flex-direction:column;gap:6px"><label style="display:flex;gap:12px;align-items:flex-start;border-radius:14px;background:var(--color-avocado-whip);box-shadow:inset 0 0 0 {{ eligRingW }} {{ eligRing }};padding:16px 18px;font-weight:500;font-size:15px;line-height:22px;cursor:pointer"><input type="checkbox" name="eligible" style="flex:none;width:20px;height:20px;margin:1px 0 0;accent-color:var(--color-avocado-skin)">I have at least 500 followers and have posted in the last 15 days.</label><span role="alert" style="font-weight:600;font-size:12px;line-height:16px;color:var(--color-chili)">{{ eligErr }}</span></div>
+            <sc-if value="{{ hasErrs }}" hint-placeholder-val="{{ false }}"><div role="alert" style="display:flex;align-items:center;gap:10px;border-radius:14px;background:var(--color-chili-tint);padding:12px 16px;font-weight:600;font-size:14px;line-height:20px;color:var(--color-chili)"><x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="error" filled="{{ true }}" size="{{ 20 }}" hint-size="20px,20px"></x-import>{{ errSummary }}</div></sc-if>
+            <button type="submit" style-hover="filter:brightness(1.15)" style-active="transform:scale(.97)" style="transition:transform 120ms cubic-bezier(.2,0,.2,1),filter 180ms cubic-bezier(.2,0,.2,1),box-shadow 180ms cubic-bezier(.2,0,.2,1),background-color 180ms cubic-bezier(.2,0,.2,1);height:56px;border:0;border-radius:28px;background:var(--color-avocado-skin);color:var(--color-pure-white);font:inherit;font-weight:700;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;" disabled="{{ sending }}">{{ submitLabel }}<x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="arrow_forward" size="{{ 20 }}" hint-size="20px,20px"></x-import></button>
+                <sc-if value="{{ canBack }}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{ stepBack }}" style="height:44px;border:0;background:transparent;color:var(--color-avocado-skin);font:inherit;font-weight:600;font-size:15px;display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer"><x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="arrow_back" size="{{ 18 }}" hint-size="18px,18px"></x-import>Back</button></sc-if>
+              </div>
+            </sc-if>
+          </form>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="FAQ" style="padding:0 clamp(16px,5.5cqw,80px) {{ secPadY }};max-width:1280px;margin:0 auto;width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(24px,4cqw,72px);align-items:start">
+    <div data-rv="" style="display:flex;flex-direction:column;gap:20px">
+      <span style="display:inline-flex;align-items:center;gap:12px;font-weight:700;font-size:13px;letter-spacing:.5px;color:var(--color-green-pea)">FAQS</span>
+      <h2 style="margin:0;font-family:'Fraunces 72pt Soft',serif;font-weight:600;font-size:{{ secH2 }};line-height:1.04">Good to <em style="font-weight:700;color:var(--color-avocado-skin)">know</em></h2>
+      <p style="margin:0;max-width:380px;font-size:{{ bodyP }};line-height:1.6;color:var(--color-charcoal)">The questions creators ask us most.</p>
+      <div style="margin-top:12px;display:flex;align-items:center;gap:16px;border-radius:24px;background:var(--color-avocado-mist);box-shadow:inset 0 0 0 1px var(--color-avocado-whip);color:var(--color-black-coffee);padding:18px 20px;max-width:{{ helpMax }}">
+        <span style="flex:none;width:48px;height:48px;border-radius:16px;background:var(--color-avocado-whip);color:var(--color-avocado-skin);display:grid;place-items:center"><x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="support_agent" filled="{{ true }}" size="{{ 26 }}" hint-size="26px,26px"></x-import></span>
+        <div style="display:flex;flex-direction:column;gap:2px;min-width:0">
+          <span style="font-weight:700;font-size:15px">Still have a question?</span>
+          <a href="https://www.instagram.com/letsfirstclub/" target="_blank" rel="noopener" style="font-size:14px;color:var(--color-avocado-skin);text-decoration:underline;text-underline-offset:3px">DM us on Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="3">
+        <details data-rv="" data-rv-d="{{ $index }}00" open="{{ q.open }}" style-hover="box-shadow:inset 0 0 0 1.5px var(--color-avocado-skin)" style="transition:transform 120ms cubic-bezier(.2,0,.2,1),filter 180ms cubic-bezier(.2,0,.2,1),box-shadow 180ms cubic-bezier(.2,0,.2,1),background-color 180ms cubic-bezier(.2,0,.2,1);border-radius:24px;background:var(--color-pure-white);box-shadow:inset 0 0 0 1px var(--color-chalk-line);overflow:hidden;">
+          <summary style="list-style:none;display:flex;align-items:center;gap:{{ faqGap }};padding:{{ faqPad }};cursor:pointer">
+            <span style="flex:none;width:44px;height:44px;border-radius:14px;background:var(--color-avocado-whip);color:var(--color-avocado-skin);display:{{ faqIcoD }};place-items:center"><x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="{{ q.icon }}" filled="{{ true }}" size="{{ 24 }}" hint-size="24px,24px"></x-import></span>
+            <span style="flex:1;font-family:'Fraunces 72pt Soft',serif;font-weight:600;font-size:{{ faqQ }};line-height:1.25">{{ q.q }}</span>
+            <span style="flex:none;width:32px;height:32px;border-radius:16px;background:var(--color-avocado-skin);color:var(--color-pure-white);display:grid;place-items:center"><x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="expand_more" size="{{ 22 }}" hint-size="22px,22px"></x-import></span>
+          </summary>
+          <p style="margin:0;padding:{{ faqAPad }};font-size:{{ bodyP }};line-height:1.6;color:var(--color-charcoal)">{{ q.a }}</p>
+        </details>
+      </sc-for>
+    </div>
+  </section>
+
+  <section data-screen-label="App band" style="position:relative;overflow:hidden;background:var(--color-cashew-cream);padding:clamp(48px,5.5cqw,96px) clamp(16px,5.5cqw,80px) clamp(16px,2cqw,32px)">
+    <div aria-hidden="true" style="position:absolute;inset:0;background:url('assets/desktop/Footer_pattern.png') 50% 0 / max(1400px,110%) auto repeat;opacity:.75;pointer-events:none"></div>
+    <div style="position:relative;max-width:1280px;margin:0 auto;display:flex;flex-direction:column">
+      <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:32px;padding:0 {{ ftInset }}">
+        <div style="flex:1 1 320px;display:flex;flex-direction:column;gap:clamp(24px,2.6cqw,40px);padding-bottom:{{ ftAppPb }}">
+          <div style="display:flex;align-items:flex-start;gap:clamp(16px,1.8cqw,28px)">
+            <img src="https://www.firstclub.co.in/_next/static/media/squared_logo.fa0e2df0.webp" alt="FirstClub" style="flex:none;width:clamp(72px,7cqw,104px);height:auto;border-radius:20px;display:block">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <h2 style="margin:0;font-weight:700;font-size:clamp(24px,2.6cqw,38px);line-height:1.2;color:var(--color-avocado-skin);text-wrap:balance;max-width:460px">India's only quality-first grocery app</h2>
+              <p style="margin:0;font-weight:500;font-size:clamp(16px,1.5cqw,22px);color:var(--color-black-coffee)">Order and see the difference.</p>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <span style="font-weight:600;font-size:clamp(16px,1.3cqw,19px);color:var(--color-avocado-skin)">Download the app now!</span>
+            <div style="display:grid;grid-template-columns:{{ storeCols }};gap:12px">
+              <a href="https://play.google.com/store/apps/details?id=com.firstclub.app&amp;pli=1" target="_blank" rel="noopener" style-hover="transform:translateY(-2px)" style-active="transform:scale(.97)" style="transition:transform 120ms cubic-bezier(.2,0,.2,1),filter 180ms cubic-bezier(.2,0,.2,1),box-shadow 180ms cubic-bezier(.2,0,.2,1),background-color 180ms cubic-bezier(.2,0,.2,1);height:56px;min-width:0;padding:0 {{ storePadX }};border-radius:12px;background:var(--color-black-coffee);color:var(--color-pure-white);display:flex;align-items:center;gap:12px"><img src="https://cdn.jsdelivr.net/npm/simple-icons@11/icons/googleplay.svg" alt="" style="width:24px;height:24px;display:block;filter:invert(1)"><span style="display:flex;flex-direction:column;line-height:1.15"><span style="font-size:11px;font-weight:500">GET IT ON</span><span style="font-size:{{ storeFs }};font-weight:600">Google Play</span></span></a>
+              <a href="https://apps.apple.com/in/app/firstclub-quality-in-minutes/id6744534743" target="_blank" rel="noopener" style-hover="transform:translateY(-2px)" style-active="transform:scale(.97)" style="transition:transform 120ms cubic-bezier(.2,0,.2,1),filter 180ms cubic-bezier(.2,0,.2,1),box-shadow 180ms cubic-bezier(.2,0,.2,1),background-color 180ms cubic-bezier(.2,0,.2,1);height:56px;min-width:0;padding:0 {{ storePadX }};border-radius:12px;background:var(--color-black-coffee);color:var(--color-pure-white);display:flex;align-items:center;gap:12px"><img src="https://cdn.jsdelivr.net/npm/simple-icons@11/icons/apple.svg" alt="" style="width:24px;height:24px;display:block;filter:invert(1)"><span style="display:flex;flex-direction:column;line-height:1.15"><span style="font-size:11px;font-weight:500">Download on the</span><span style="font-size:{{ storeFs }};font-weight:600">App Store</span></span></a>
+            </div>
+          </div>
+        </div>
+        <sc-if value="{{ notMob }}" hint-placeholder-val="{{ true }}">
+          <div style="flex:none;width:{{ ftPhoneW }};height:{{ ftPhoneH }};margin-right:clamp(0px,3cqw,48px);border:8px solid var(--color-black-coffee);border-bottom:0;border-radius:56px 56px 0 0;background:var(--color-pure-white);padding:14px 14px 0">
+            <div style="height:100%;border-radius:44px 44px 0 0;background:var(--color-border-subtle);box-shadow:inset 0 0 0 1px var(--color-chalk-line);display:flex;flex-direction:column;align-items:center;gap:clamp(20px,2cqw,28px);padding:clamp(18px,1.8cqw,26px) clamp(18px,2cqw,28px) 0">
+              <span style="width:34%;height:24px;border-radius:12px;background:var(--color-black-coffee)"></span>
+              <div style="width:100%;aspect-ratio:1;padding:6%;border-radius:12px;background:var(--color-pure-white)"><img src="assets/desktop/QR_code.jpg" alt="QR code to download the FirstClub app" style="width:100%;height:100%;object-fit:contain;display:block"></div>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+      <footer style="position:relative;z-index:1;border-radius:clamp(24px,2.6cqw,40px);background:var(--color-avocado-skin);color:var(--color-pure-white);padding:{{ ftPad }};display:flex;flex-direction:column;gap:clamp(40px,4cqw,56px)">
+        <div style="display:grid;grid-template-columns:{{ ftCols }};gap:40px 32px">
+          <div style="grid-column:{{ ftSpan }};display:flex;flex-direction:column;gap:14px">
+            <img src="assets/mobile/Footer_Logo.png" alt="FirstClub" style="width:clamp(180px,16cqw,220px);height:auto;display:block">
+            <span style="font-size:16px;font-weight:500">Curated Slow. Delivered Fast.</span>
+            <div style="display:flex;gap:16px;margin-top:22px">
+              <sc-for list="{{ socials }}" as="s" hint-placeholder-count="4"><a href="{{ s.href }}" target="_blank" rel="noopener" aria-label="{{ s.name }}" style-hover="background-color:var(--color-avocado-pit);transform:translateY(-2px)" style-active="transform:scale(.94)" style="transition:transform 120ms cubic-bezier(.2,0,.2,1),filter 180ms cubic-bezier(.2,0,.2,1),box-shadow 180ms cubic-bezier(.2,0,.2,1),background-color 180ms cubic-bezier(.2,0,.2,1);width:48px;height:48px;border:1.5px solid var(--color-pure-white);color:var(--color-pure-white);display:grid;place-items:center"><img src="{{ s.icon }}" alt="" style="width:22px;height:22px;display:block;filter:invert(1)"></a></sc-for>
+            </div>
+          </div>
+          <sc-for list="{{ footerCols }}" as="col" hint-placeholder-count="2">
+            <div style="display:flex;flex-direction:column;gap:24px">
+              <span style="font-weight:700;font-size:17px">{{ col.title }}</span>
+              <div style="display:flex;flex-direction:column;gap:22px">
+                <sc-for list="{{ col.links }}" as="l" hint-placeholder-count="4"><a href="{{ l.href }}" style-hover="text-decoration:underline;text-underline-offset:5px" style="font-size:15px;color:var(--color-pure-white);text-decoration:none">{{ l.label }}</a></sc-for>
+              </div>
+            </div>
+          </sc-for>
+          <div style="grid-column:{{ ftSpan }};display:flex;flex-direction:column;gap:18px;font-size:16px;line-height:1.5;color:var(--color-avocado-whip)">
+            <span style="max-width:340px">6th Floor, North Tower, Vaishnavi Tech Park, Sarjapur Main Rd, Bellandur, Bengaluru, Karnataka 560103</span>
+            <span>CIN: U46909KA2024PTC193326</span>
+          </div>
+        </div>
+        <span style="font-size:15px">© 2026 First Club. All rights reserved.</span>
+      </footer>
+    </div>
+  </section>
+  <sc-if value="{{ ctaOn }}" hint-placeholder-val="{{ false }}">
+    <div style="position:sticky;bottom:84px;height:0;z-index:30;pointer-events:none">
+      <div style="position:absolute;left:16px;right:16px;bottom:0;display:flex;align-items:center;gap:12px;padding:8px 8px 8px 18px;border-radius:32px;background:var(--color-avocado-skin);box-shadow:0 0 0 1px rgba(255,255,255,.12);pointer-events:auto;opacity:{{ ctaOp }};transform:translateY({{ ctaY }});transition:opacity 280ms cubic-bezier(0,0,.2,1),transform 280ms cubic-bezier(0,0,.2,1)">
+        <div style="flex:1;min-width:0;display:flex;flex-direction:column;color:var(--color-pure-white)"><span style="font-weight:700;font-size:14px;line-height:18px">Join 1500+ creators</span><span style="font-size:12px;line-height:16px;color:var(--color-avocado-whip)">Takes about two minutes</span></div>
+        <a href="#apply" style-hover="filter:brightness(1.15)" style-active="transform:scale(.97)" style="transition:transform 120ms cubic-bezier(.2,0,.2,1),filter 180ms cubic-bezier(.2,0,.2,1),box-shadow 180ms cubic-bezier(.2,0,.2,1),background-color 180ms cubic-bezier(.2,0,.2,1);flex:none;height:48px;padding:0 20px;border-radius:24px;background:var(--color-pure-white);color:var(--color-avocado-skin);display:flex;align-items:center;gap:6px;font-weight:700;font-size:15px">Apply<x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="arrow_forward" size="{{ 18 }}" hint-size="18px,18px"></x-import></a>
+      </div>
+    </div>
+  </sc-if>
+</div>
+  <div style="position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:100;display:none;gap:4px;padding:4px;border-radius:28px;background:var(--color-pure-white);box-shadow:inset 0 0 0 1px var(--color-chalk-line);font-family:'Plus Jakarta Sans',sans-serif">
+    <sc-for list="{{ modes }}" as="m" hint-placeholder-count="4">
+      <button onClick="{{ m.pick }}" aria-pressed="{{ m.on }}" style="height:40px;padding:0 16px;border:0;border-radius:20px;background:{{ m.bg }};color:{{ m.fg }};display:flex;align-items:center;gap:6px;font-family:inherit;font-weight:700;font-size:13px;cursor:pointer">
+        <x-import component-from-global-scope="PlatterDesignSystemV2_81038f.Icon" name="{{ m.icon }}" size="{{ 20 }}" hint-size="20px,20px"></x-import>
+        <span>{{ m.label }}</span>
+      </button>
+    </sc-for>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;googleFormUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Apply form&quot;},&quot;reelVideo&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Creators&quot;}}">
+// Paste each Google Form question's entry ID here (Form → ⋮ → Get pre-filled link → inspect the URL's entry.XXXX params).
+const GOOGLE_FORM_ENTRIES = {
+  name: '', phone: '', email: '', instagram: '', youtube: '', snapchat: '', city: '', fc_phone: '', followers: '', niche: ''
+};
+class Component extends DCLogic {
+  fx(f) { const er = (this.state.errs || {})[f.name] || ''; const tel = f.type === 'tel'; return { ...f, im: tel ? 'numeric' : f.type === 'email' ? 'email' : 'text', max: tel ? 10 : 80, err: er, bad: !!er, ring: er ? 'var(--color-chili)' : 'var(--color-chalk-line)', ringW: er ? '1.5px' : '1px', msg: er || f.hint, msgC: er ? 'var(--color-chili)' : 'var(--color-charcoal)', msgW: er ? 600 : 500, role: er ? 'alert' : undefined }; }
+  validate(fd, steps) {
+    const v = k => String(fd.get(k) || '').trim(), e = {}, ph = /^[6-9]\d{9}$/;
+    const S = { 0: () => { if (v('name').length < 2) e.name = 'Enter your full name'; if (!v('city')) e.city = 'Enter your city'; if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v('email'))) e.email = v('email') ? 'Enter a valid email address' : 'Enter your email'; if (!ph.test(v('phone').replace(/\D/g, ''))) e.phone = v('phone') ? 'Enter a valid 10-digit mobile number' : 'Enter your phone number'; },
+      1: () => { const ig = v('instagram').replace(/^@/, ''); if (!ig) e.instagram = 'Enter your Instagram handle'; else if (!/^[A-Za-z0-9._]{1,30}$/.test(ig)) e.instagram = 'Use letters, numbers, dots or underscores'; ['youtube', 'snapchat'].forEach(k => { const x = v(k).replace(/^@/, ''); if (x && !/^[A-Za-z0-9._-]{1,50}$/.test(x)) e[k] = 'Check this handle'; }); },
+      2: () => { if (!ph.test(v('fc_phone').replace(/\D/g, ''))) e.fc_phone = v('fc_phone') ? 'Enter a valid 10-digit mobile number' : 'Enter the number on your FirstClub account'; if (!v('followers') || v('followers') === 'Select') e.followers = 'Select your follower count'; if (!v('niche') || v('niche') === 'Select') e.niche = 'Select your niche'; if (!fd.get('eligible')) e.eligible = 'Please confirm you meet the criteria'; } };
+    steps.forEach(s => S[s]());
+    return e;
+  }
+  stepOf(k) { return ['name', 'city', 'email', 'phone'].includes(k) ? 0 : ['instagram', 'youtube', 'snapchat'].includes(k) ? 1 : 2; }
+  focusFirst(e) { const k = Object.keys(e)[0]; const el = k && this.form && this.form.querySelector('[name="' + k + '"]'); if (el) setTimeout(() => { const r = el.getBoundingClientRect(); window.scrollTo({ top: window.scrollY + r.top - 140, behavior: 'smooth' }); el.focus({ preventScroll: true }); }, 60); }
+  hwGo(i) { if ((this.state.hw || 0) === i) return; clearInterval(this.hwT); this.setState({ hw: i }); this.hwT = setInterval(() => this.setState(s => ({ hw: ((s.hw || 0) + 1) % 4 })), 3600); }
+  state = { w: window.innerWidth, menu: false, mode: 'auto' };
+  componentDidMount() { this.onCtaScroll = () => { const h = this.heroEl, a = document.getElementById('apply'); if (!h || !a) return; const vh = window.innerHeight; const past = h.getBoundingClientRect().bottom < 80; const ar = a.getBoundingClientRect(); const inApply = ar.top < vh * 0.85 && ar.bottom > 120; const show = past && !inApply; if (show !== !!this.state.cta) this.setState({ cta: show }); }; window.addEventListener('scroll', this.onCtaScroll, { passive: true, capture: true }); this.r = () => this.setState({ w: window.innerWidth }); window.addEventListener('resize', this.r); if (!matchMedia('(prefers-reduced-motion: reduce)').matches) this.slideT = setInterval(() => this.setState(st => ({ slide: ((st.slide || 0) + 1) % 4 })), 5500); this.reveal(); this.rvT = setInterval(() => this.reveal(), 800); }
+  reveal() {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    this.rvIO = this.rvIO || new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target, d = parseInt(el.getAttribute('data-rv-d') || '0', 10);
+      el.style.transitionDelay = Math.min(d, 600) + 'ms';
+      el.style.opacity = '1'; el.style.translate = '0 0';
+      this.rvIO.unobserve(el);
+      setTimeout(() => { el.style.transitionDelay = ''; }, 1400);
+    }), { threshold: 0.15 });
+    document.querySelectorAll('[data-rv]:not([data-rv-on])').forEach(el => {
+      el.setAttribute('data-rv-on', '');
+      el.style.opacity = '0'; el.style.translate = '0 24px';
+      el.style.transition = (el.style.transition ? el.style.transition + ',' : '') + 'opacity 700ms cubic-bezier(0,0,.2,1),translate 700ms cubic-bezier(0,0,.2,1)';
+      this.rvIO.observe(el);
+    });
+  }
+  componentWillUnmount() { clearInterval(this.hwT); window.removeEventListener('scroll', this.onCtaScroll, true); window.removeEventListener('resize', this.r); clearInterval(this.rvT); clearInterval(this.slideT); this.rvIO && this.rvIO.disconnect(); }
+  renderVals() {
+    const MODES = [{ id: 'desktop', label: 'Desktop', icon: 'desktop_windows', w: 1440 }, { id: 'tablet', label: 'Tablet', icon: 'tablet_mac', w: 768 }, { id: 'mobile', label: 'Mobile', icon: 'smartphone', w: 390 }, { id: 'auto', label: 'Fit', icon: 'fit_screen', w: null }];
+    const cur = MODES.find(m => m.id === this.state.mode) || MODES[0];
+    const effW = cur.w || this.state.w;
+    const narrow = effW < 1100;
+    const mob = effW < 600; const M = 'assets/mobile/';
+    const frame = { frameW: cur.w ? cur.w + 'px' : '100%', modes: MODES.map(m => ({ ...m, on: m.id === cur.id, bg: m.id === cur.id ? 'var(--color-avocado-skin)' : 'transparent', fg: m.id === cur.id ? 'var(--color-pure-white)' : 'var(--color-black-coffee)', pick: () => { sessionStorage.setItem('fc-site-mode', m.id); this.setState({ mode: m.id, menu: false }); } })) };
+    return {
+      ...frame,
+      countRef: this.countRefFn || (this.countRefFn = el => {
+        if (this.countIO) { this.countIO.disconnect(); this.countIO = null; }
+        if (!el) return;
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) { el.textContent = '1500+'; return; }
+        el.textContent = '500+';
+        const run = () => {
+          const from = 500, to = 1500, d = 1600, t0 = performance.now();
+          const step = t => { const k = Math.min(1, (t - t0) / d), e = 1 - Math.pow(1 - k, 3); el.textContent = Math.round(from + (to - from) * e) + '+'; if (k < 1) requestAnimationFrame(step); };
+          requestAnimationFrame(step);
+        };
+        this.countIO = new IntersectionObserver(es => { if (es[0].isIntersecting) { run(); this.countIO.disconnect(); this.countIO = null; } }, { threshold: 0.6 });
+        this.countIO.observe(el);
+      }),
+      notSent: !this.state.sent,
+      hwCols: mob ? 'minmax(0,1fr)' : narrow ? 'repeat(2,minmax(0,1fr))' : 'repeat(4,minmax(0,1fr))', hwDir: mob ? 'row' : 'column', hwGap: mob ? '16px' : '20px', hwRailDir: mob ? 'column' : 'row', hwRailGap: mob ? '6px' : '12px', hwLineW: mob ? '2px' : 'auto', hwLineH: mob ? 'auto' : '2px', hwItemPad: mob ? '0' : narrow ? '0 16px 32px' : '0 16px', hwTextPad: mob ? '2px 0 28px' : '4px 16px 0 0', hwPanelPad: mob ? '24px 20px 4px' : 'clamp(28px,3.4cqw,48px) clamp(16px,2cqw,32px)',
+      hwRef: this.hwRefFn || (this.hwRefFn = el => { clearInterval(this.hwT); if (el) this.hwT = setInterval(() => this.setState(s => ({ hw: ((s.hw || 0) + 1) % 4 })), 3600); }),
+      hwPad: mob ? '22px 0' : 'clamp(28px,3cqw,44px) clamp(16px,2cqw,32px) 0', hwBorderB: mob ? '1px solid var(--color-chalk-line)' : '0',
+      hwHeadDir: 'row', hwNum: mob ? '96px' : '132px', hwTitle: mob ? '20px' : 'clamp(22px,1.9cqw,26px)',
+      heroRef: this.heroRefFn || (this.heroRefFn = el => { this.heroEl = el; }),
+      heroTouchStart: e => { this.tx = e.touches[0].clientX; },
+      heroTouchEnd: e => { const dx = e.changedTouches[0].clientX - (this.tx || 0); if (Math.abs(dx) < 40) return; clearInterval(this.slideT); this.setState(st => ({ slide: (((st.slide || 0) + (dx < 0 ? 1 : -1)) % 4 + 4) % 4 })); this.slideT = setInterval(() => this.setState(st => ({ slide: ((st.slide || 0) + 1) % 4 })), 5500); },
+      ctaOn: mob, ctaOp: this.state.cta ? 1 : 0, ctaY: this.state.cta ? '0' : '24px',
+      showBring: !mob || (this.state.bgTab || 'bring') === 'bring', showGives: !mob || this.state.bgTab === 'gives',
+      bgTabs: [['bring', 'You bring', 'photo_camera'], ['gives', 'You get', 'redeem']].map(([id, label, icon]) => { const on = (this.state.bgTab || 'bring') === id; return { label, icon, on, bg: on ? 'var(--color-avocado-skin)' : 'transparent', fg: on ? 'var(--color-pure-white)' : 'var(--color-black-coffee)', pick: () => this.setState({ bgTab: id }) }; }),
+      fgD0: (!mob || (this.state.fstep || 0) === 0) ? 'block' : 'none', fgD1: (!mob || this.state.fstep === 1) ? 'block' : 'none', fgD2: (!mob || this.state.fstep === 2) ? 'block' : 'none',
+      showNav: mob && (this.state.fstep || 0) < 2, showFinal: !mob || this.state.fstep === 2, canBack: mob && (this.state.fstep || 0) > 0,
+      stepNo: (this.state.fstep || 0) + 1, stepTitle: ['About you', 'Your channels', 'Your FirstClub details'][this.state.fstep || 0],
+      stepBars: [0, 1, 2].map(i => i <= (this.state.fstep || 0) ? 'var(--color-avocado-skin)' : 'var(--color-chalk-line)'),
+      stepNext: () => { const cur = this.state.fstep || 0; if (this.form) { const errs = this.validate(new FormData(this.form), [cur]); if (Object.keys(errs).length) { this.setState({ errs: { ...(this.state.errs || {}), ...errs } }); this.focusFirst(errs); return; } } this.setState(st => ({ fstep: Math.min(2, (st.fstep || 0) + 1) })); const a = document.getElementById('apply'); if (a) { const sc = a.closest('[style*="overflow"]') || document.scrollingElement; window.scrollTo({ top: window.scrollY + a.getBoundingClientRect().top - 90, behavior: 'smooth' }); } },
+      stepBack: () => this.setState(st => ({ fstep: Math.max(0, (st.fstep || 0) - 1) })),
+      heroMinH: mob ? '600px' : 'clamp(620px,56cqw,820px)',
+      heroH1: mob ? '40px' : 'clamp(44px,6.2cqw,96px)', heroP: mob ? '16px' : 'clamp(17px,1.5cqw,21px)',
+      heroNowrap: mob ? 'normal' : 'nowrap',
+      heroBtnDir: 'row', heroBtnGap: mob ? '8px' : '12px',
+      dotsBottom: mob ? '20px' : 'clamp(32px,3.4cqw,56px)', dotsTop: 'auto',
+      crAlign: mob ? 'center' : 'flex-start', crText: mob ? 'center' : 'left', crTxtGap: mob ? '14px' : '20px', crH2: mob ? '26px' : 'clamp(28px,3cqw,44px)', crBtnMt: mob ? '8px' : '12px', crBtnW: mob ? '100%' : 'auto', bodyP: mob ? '15px' : '17px',
+      secH2: mob ? '32px' : 'clamp(34px,4.2cqw,60px)', bgH3: mob ? '24px' : 'clamp(26px,2.6cqw,36px)', bgTile: mob ? '48px' : '56px', bgItemPad: mob ? '14px 16px' : '16px 18px', bgItemFs: mob ? '15px' : 'clamp(16px,1.3cqw,18px)', bgH4: mob ? '18px' : '20px', bgSmFs: mob ? '14px' : '15px',
+      faqIcoD: mob ? 'none' : 'grid', faqQ: mob ? '18px' : 'clamp(19px,1.6cqw,23px)', faqAPad: mob ? '0 20px 20px' : '0 24px 24px 86px', helpMax: mob ? 'none' : '420px',
+      storeCols: mob ? 'repeat(2,minmax(0,1fr))' : 'repeat(2,max-content)', storePadX: mob ? '14px' : '22px', storeFs: mob ? '15px' : '17px',
+      secPadY: mob ? '48px' : 'clamp(72px,10cqw,160px)',
+      reelMax: mob ? '240px' : '340px', crCols: mob ? 'minmax(0,1fr)' : 'minmax(0,.85fr) minmax(0,1.15fr)', crGap: mob ? '40px' : 'clamp(32px,6cqw,120px)',
+      countSize: mob ? '76px' : 'clamp(96px,11cqw,176px)',
+      stTpl: mob ? 'minmax(0,1fr)' : 'repeat(auto-fit,minmax(min(100%,230px),1fr))',
+      stFlow: 'row',
+      stCol: 'auto',
+      stOv: 'visible',
+      stBleed: '0',
+      stBleedPad: '0',
+      stMinH: mob ? '0' : 'clamp(280px,24cqw,340px)', stDir: mob ? 'row' : 'column', stGap: mob ? '16px' : '0', stTxtGap: mob ? '6px' : '10px', stTxtPad: mob ? '0' : '40px', stHeadDir: mob ? 'column' : 'row', stHeadAlign: mob ? 'flex-start' : 'center',
+      faqIndent: mob ? '20px' : '86px',
+      faqGap: mob ? '14px' : '18px',
+      faqPad: mob ? '18px 20px' : '22px 24px',
+      formPad: mob ? '20px 16px' : 'clamp(20px,2.8cqw,40px)',
+      applyPad: mob ? '28px 12px 12px' : 'clamp(28px,4.4cqw,72px)', applyGap: mob ? '24px' : 'clamp(32px,4.4cqw,72px)',
+      applyColGap: mob ? '14px' : '20px', applyColPad: mob ? '0 8px' : 'clamp(0px,1cqw,16px) 0', applyH: mob ? '30px' : 'clamp(34px,4cqw,58px)', applyP: mob ? '15px' : '17px',
+      tlTop: mob ? '8px' : 'clamp(12px,2cqw,28px)', tlGap: mob ? '4px' : '12px', tlLine: mob ? '17px' : '23px', tlItemGap: mob ? '14px' : '18px', tlItemPad: mob ? '8px 0' : '14px 0', tlDot: mob ? '36px' : '48px', tlH: mob ? '17px' : 'clamp(20px,1.7cqw,24px)',
+      formGap: mob ? '22px' : '28px', fieldGap: mob ? '14px' : '16px 18px',
+      cardPad: mob ? '22px' : 'clamp(28px,3.4cqw,52px)',
+      heroSlides: [['hero1', '50% 50%'], ['hero2', '50% 50%'], ['hero3', '50% 50%'], ['hero4', '50% 50%']].map(([n, pos], i) => ({ src: 'assets/creator/' + n + '_l.png', pos, op: (this.state.slide || 0) === i ? 1 : 0, ad: (-i * 3.5) + 's', label: 'Show image ' + (i + 1), dw: (this.state.slide || 0) === i ? '28px' : '8px', dc: (this.state.slide || 0) === i ? 'var(--color-pure-white)' : 'var(--color-ash)', go: () => { clearInterval(this.slideT); this.setState({ slide: i }); this.slideT = setInterval(() => this.setState(st => ({ slide: ((st.slide || 0) + 1) % 4 })), 5500); } })),
+      swapVis: (MODES => 1)() && ((this.state.mode === 'mobile' || this.state.mode === 'tablet' || ((this.state.mode === 'auto') && this.state.w < 900)) ? 'hidden' : 'visible'),
+      heroStats: [{ v: '1500+', l: 'Creators already in' }, { v: '500+', l: 'Followers to apply' }, { v: 'Every order', l: 'On your code earns commission' }],
+      applyNotes: [{ icon: 'edit_note', s: '2 min to apply', h: 'Apply in two minutes', t: 'Tell us about you and your channels.' }, { icon: 'mark_email_read', s: 'Reply by email', h: 'Hear back by email', t: 'We review every application and reply personally.' }, { icon: 'redeem', s: 'Free hamper', h: 'Get your first hamper', t: 'Once approved, good groceries arrive at your door.' }],
+      reelSrc: this.props.reelVideo || '',
+      hasMp4: !!this.props.reelVideo, noMp4: !this.props.reelVideo,
+      soundOn: !!this.state.soundOn,
+      muteIcon: this.state.soundOn ? 'volume_up' : 'volume_off',
+      muteLabel: this.state.soundOn ? 'Mute video' : 'Unmute video',
+      vidRef: this.vidRefFn || (this.vidRefFn = el => { this.vid = el; if (el) { el.muted = !this.state.soundOn; el.play && el.play().catch(() => {}); } }),
+      toggleMute: () => { const on = !this.state.soundOn; if (this.vid) { this.vid.muted = !on; if (on) this.vid.play().catch(() => {}); } this.setState({ soundOn: on }); },
+      steps: [['edit_note', 'Apply', 'Tell us about yourself and your channel. We review every application.'], ['videocam', 'Create', 'Get your own code, order from FirstClub and make content your way.'], ['send_to_mobile', 'Publish', 'Send us your reel for a quick review, then post it for your audience.'], ['payments', 'Earn', 'Earn commission on every order placed with your code.']].map(([icon, title, text], i) => { const A = this.state.hw || 0, on = i === A, done = i < A; const full = done ? '100%' : on ? '100%' : '0%'; return { no: '0' + (i + 1), icon, title, text, hasLine: i < 3, pick: () => this.hwGo(i), nodeBg: on || done ? 'var(--color-avocado-skin)' : 'var(--color-pure-white)', nodeFg: on || done ? 'var(--color-pure-white)' : 'var(--color-avocado-skin)', nodeRing: on || done ? 'var(--color-avocado-skin)' : 'var(--color-chalk-line)', lbl: on || done ? 'var(--color-avocado-skin)' : 'var(--color-charcoal)', fillW: mob ? '100%' : full, fillH: mob ? full : '100%', fillT: on ? (mob ? 'height' : 'width') + ' 3600ms linear' : 'none' }; }),
+      bring: ['Honest opinions and recommendations you stand by', 'Stories that connect with and inspire your audience', 'At least 500 followers on Instagram', 'A post in the last 15 days'],
+      gives: [{ icon: 'shopping_basket', title: 'PR Hampers', text: 'Good groceries delivered to your door, to try first and talk about after.' }, { icon: 'groups', title: 'Community', text: 'Creators who care about good food as much as you do.' }, { icon: 'smartphone', title: 'Featured on the app', text: 'Your best FirstClub finds, shown to customers right inside the app.' }],
+      fieldsA: [{ label: 'Full name', name: 'name', type: 'text', icon: 'person', pre: '', ph: 'Your name', hint: '', opt: '', span: 'auto' }, { label: 'City', name: 'city', type: 'text', icon: 'location_on', pre: '', ph: 'Where you are based', hint: '', opt: '', span: 'auto' }, { label: 'Email', name: 'email', type: 'email', icon: 'mail', pre: '', ph: 'you@example.com', hint: '', opt: '', span: 'auto' }, { label: 'Phone number', name: 'phone', type: 'tel', icon: 'call', pre: '+91', ph: '', hint: '', opt: '', span: 'auto' }].map(f => this.fx(f)),
+      fieldsB: [{ label: 'Instagram', name: 'instagram', type: 'text', icon: 'photo_camera', pre: '@', ph: 'yourhandle', hint: '', opt: '', span: 'auto' }, { label: 'YouTube', name: 'youtube', type: 'text', icon: 'smart_display', pre: '@', ph: '', hint: '', opt: 'Optional', span: 'auto' }, { label: 'Snapchat', name: 'snapchat', type: 'text', icon: 'chat_bubble', pre: '@', ph: '', hint: '', opt: 'Optional', span: 'auto' }].map(f => this.fx(f)),
+      fieldsC: [{ label: 'FirstClub app phone number', name: 'fc_phone', type: 'tel', icon: 'smartphone', pre: '+91', ph: '', hint: 'The number on your FirstClub account. Your commission is credited here.', opt: '', span: '1 / -1' }].map(f => this.fx(f)),
+      selects: [{ label: 'Follower count', name: 'followers', options: ['Select', '500 – 1,000', '1,000 – 5,000', '5,000 – 10,000', '10,000+'] }, { label: 'Niche', name: 'niche', options: ['Select', 'Food & recipes', 'Health & fitness', 'Parenting & family', 'Lifestyle', 'Home & kitchen', 'Other'] }].map(s => { const er = (this.state.errs || {})[s.name] || ''; return { ...s, err: er, bad: !!er, ring: er ? 'var(--color-chili)' : 'var(--color-chalk-line)', ringW: er ? '1.5px' : '1px' }; }),
+      faqs: [{ icon: 'how_to_reg', open: true, q: 'Who can apply?', a: 'Any Instagram creator with at least 500 followers who has posted in the last 15 days.' }, { icon: 'mark_email_read', open: false, q: 'How will I hear back?', a: 'By email, at the address you apply with. If you do not see us, check your spam folder.' }, { icon: 'movie', open: false, q: 'Where do I send my reel?', a: 'Reply to your brief email with the video. We will approve it or share feedback, and then you post it on Instagram.' }],
+      mob, notMob: !mob, headerBg: 'transparent',
+      ftInset: mob ? '4px' : 'clamp(0px,1.5cqw,24px)', ftAppPb: mob ? '32px' : 'clamp(32px,4cqw,64px)', ftPhoneW: narrow ? '280px' : 'clamp(300px,25cqw,400px)', ftPhoneH: narrow ? '300px' : 'clamp(320px,27cqw,430px)',
+      ftPad: mob ? '36px 24px 28px' : 'clamp(40px,5cqw,72px) clamp(28px,6cqw,88px) clamp(36px,4cqw,56px)',
+      ftCols: mob ? 'repeat(2,minmax(0,1fr))' : narrow ? 'repeat(2,minmax(0,1fr))' : 'minmax(0,1.15fr) repeat(2,minmax(0,1fr)) minmax(0,1.15fr)', ftSpan: narrow ? '1 / -1' : 'auto',
+      wide: !narrow, narrow, menuOpen: narrow && this.state.menu, menuIcon: this.state.menu ? 'close' : 'menu',
+      toggleMenu: () => this.setState(s => ({ menu: !s.menu })),
+      stars: [1, 2, 3, 4, 5],
+      sent: !!this.state.sent,
+      submit: (e) => {
+        e.preventDefault();
+        if (this.state.sending) return;
+        const fd = new FormData(e.target), errs = this.validate(fd, [0, 1, 2]);
+        if (Object.keys(errs).length) { const first = Object.keys(errs)[0]; this.setState({ errs, tried: true, fstep: mob ? this.stepOf(first) : this.state.fstep }); this.focusFirst(errs); return; }
+        const G = this.props.googleFormUrl || '';
+        const map = GOOGLE_FORM_ENTRIES;
+        if (G) {
+          const body = new FormData();
+          fd.forEach((v, k) => { if (map[k]) body.append(map[k], v); });
+          fetch(G.replace(/\/viewform.*$/, '/formResponse'), { method: 'POST', mode: 'no-cors', body }).catch(() => {});
+        }
+        this.setState({ sending: true, errs: {} });
+        setTimeout(() => this.setState({ sending: false, sent: true }), 900);
+      },
+      confRef: this.confRefFn || (this.confRefFn = el => { if (!el || this.confDone) return; this.confDone = true; if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        const c = document.createElement('canvas'), r = el.getBoundingClientRect(), dpr = window.devicePixelRatio || 1; c.setAttribute('aria-hidden', 'true'); c.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2'; c.width = r.width * dpr; c.height = r.height * dpr; el.appendChild(c);
+        const x = c.getContext('2d'); x.scale(dpr, dpr); const C = ['#044123', '#12934A', '#DE1135', '#EAF2E7', '#FBEEDB', '#00271A'], W = r.width, H = r.height, ox = W / 2, oy = H * 0.38;
+        const P = Array.from({ length: 140 }, () => { const a = Math.random() * Math.PI * 2, s = 4 + Math.random() * 9; return { x: ox, y: oy, vx: Math.cos(a) * s, vy: Math.sin(a) * s - 6, w: 6 + Math.random() * 6, h: 4 + Math.random() * 6, r: Math.random() * 6, vr: (Math.random() - .5) * .3, c: C[(Math.random() * C.length) | 0], round: Math.random() < .3 }; });
+        const t0 = performance.now(), D = 2600;
+        const tick = t => { const k = (t - t0) / D; x.clearRect(0, 0, W, H); P.forEach(p => { p.vx *= .985; p.vy = p.vy * .985 + .32; p.x += p.vx; p.y += p.vy; p.r += p.vr; x.save(); x.globalAlpha = Math.max(0, 1 - Math.max(0, k - .6) / .4); x.translate(p.x, p.y); x.rotate(p.r); x.fillStyle = p.c; if (p.round) { x.beginPath(); x.arc(0, 0, p.w / 2.4, 0, 6.283); x.fill(); } else x.fillRect(-p.w / 2, -p.h / 2, p.w, p.h * Math.abs(Math.cos(p.r * 2))); x.restore(); }); if (k < 1) requestAnimationFrame(tick); else c.remove(); };
+        requestAnimationFrame(tick); }),
+      tickSvg: this.tickEl || (this.tickEl = React.createElement('svg', { width: 40, height: 40, viewBox: '0 0 24 24', fill: 'none', 'aria-hidden': true }, React.createElement('path', { d: 'M5 12.5l4.5 4.5L19 7.5', stroke: 'currentColor', strokeWidth: 2, strokeLinecap: 'round', strokeLinejoin: 'round', style: { strokeDasharray: 36, strokeDashoffset: 36, animation: 'fc-tick 520ms 380ms cubic-bezier(.65,0,.35,1) forwards' } }))),
+      formRef: this.formRefFn || (this.formRefFn = el => { this.form = el; }),
+      clearErr: e => { const n = e.target && e.target.name; const er = this.state.errs || {}; if (n && er[n]) { const x = { ...er }; delete x[n]; this.setState({ errs: x }); } },
+      sending: !!this.state.sending, submitLabel: this.state.sending ? 'Sending…' : 'Join the Circle',
+      eligErr: (this.state.errs || {}).eligible || '', eligRing: (this.state.errs || {}).eligible ? 'var(--color-chili)' : 'transparent', eligRingW: (this.state.errs || {}).eligible ? '1.5px' : '0',
+      hasErrs: Object.keys(this.state.errs || {}).length > 0 && !!this.state.tried, errSummary: (n => n === 1 ? '1 field needs your attention' : n + ' fields need your attention')(Object.keys(this.state.errs || {}).length),
+
+      partners: [
+        { name: 'Provilac', role: 'Founder', text: 'FirstClub shares our commitment to purity and transparency. It’s rare to find a platform that cares this deeply about what goes in.' },
+        { name: 'Akshayakalpa', role: 'Founder', text: 'FirstClub understands the care behind clean milk. Their focus on quality and traceability makes them a natural partner for us.' },
+        { name: 'Savi Farms', role: 'Farm Partner', text: 'With FirstClub, our produce reaches people who truly value freshness. The way they handle and present it makes a real difference.”' },
+        { name: 'SayB', role: 'Founder', text: 'They don’t just list products, they understand them. That makes FirstClub a strong partner for brands built on thoughtful ingredients.' }
+      ].map(x => ({ ...x, mob, desk: !mob, img: M + ({ Provilac: 'partner1', Akshayakalpa: 'partner2', 'Savi Farms': 'Partner3', SayB: 'Partner4' })[x.name] + '.png' })).map((x, i) => ({ ...x, mob: true, desk: false, img: mob ? x.img : 'assets/desktop/partnertest' + (['Provilac', 'Akshayakalpa', 'Savi Farms', 'SayB'].indexOf(x.name) + 1) + '.png' })),
+      socials: [{ label: 'in', icon: 'https://cdn.jsdelivr.net/npm/@tabler/icons@3.19.0/icons/outline/brand-linkedin.svg', name: 'LinkedIn', href: 'https://www.linkedin.com/company/firstclub-private-limited/' }, { label: 'ig', icon: 'https://cdn.jsdelivr.net/npm/@tabler/icons@3.19.0/icons/outline/brand-instagram.svg', name: 'Instagram', href: 'https://www.instagram.com/letsfirstclub/' }, { label: 'x', icon: 'https://cdn.jsdelivr.net/npm/@tabler/icons@3.19.0/icons/outline/brand-x.svg', name: 'X', href: 'https://x.com/FirstClubIndia' }, { label: 'f', icon: 'https://cdn.jsdelivr.net/npm/@tabler/icons@3.19.0/icons/outline/brand-facebook.svg', name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61577220823547' }],
+      footerCols: [
+        { title: 'Important Links', links: [{ label: 'News', href: 'https://www.firstclub.co.in/news' }, { label: 'Banned Ingredients', href: 'FirstClub%20Banned%20Ingredients%20Responsive.dc.html' }, { label: 'Careers', href: 'https://firstclub.greythr.com/hire/jobs/' }, { label: 'Creator Circle', href: 'FirstClub%20Creator%20Circle%20Responsive.dc.html' }, { label: 'Account Deletion', href: 'https://www.firstclub.co.in/account-deletion' }] },
+        { title: 'Legal', links: [{ label: 'Terms & Conditions', href: 'https://www.firstclub.co.in/terms' }, { label: 'Privacy Policy', href: 'https://www.firstclub.co.in/privacy-policy' }, { label: 'Security', href: 'https://www.firstclub.co.in/security' }, { label: 'Customer Support', href: 'https://www.firstclub.co.in/support' }] }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+/* Platter spacing — 8pt system with 2/4px sub-steps, as measured across PDS-V0 components. */
+:root{
+--space-2xs:2px;
+--space-xs:4px;
+--space-s:6px;
+--space-sm:8px;
+--space-m:12px;
+--space-l:16px;
+--space-xl:20px;
+--space-2xl:24px;
+--space-3xl:32px;
+--space-4xl:40px;
+--space-5xl:48px;
+--space-6xl:56px;
+
+/* Layout constants from the mobile boards */
+--screen-width:390px;
+--screen-gutter:16px;
+--content-width:358px;      /* 390 − 2×16 gutter: the width every full-width control uses */
+--statusbar-height:48px;
+--header-row-height:74px;
+--bottom-nav-height:74px;
+--tap-target-min:44px;
+
+/* Floating surfaces — Foundation rule. Every floating surface (cart floater, bottom sheet,
+   toast, snackbar, floating CTA / confirmation bar, floating widget) sits 32px above the
+   home-indicator safe area and is horizontally centred. Never position one by hand. */
+--safe-area-bottom:34px;                 /* iPhone home-indicator inset on the 390x844 canvas */
+--floating-gap:32px;                     /* the universal gap above the safe area */
+--floating-offset:66px;                  /* safe area + gap: the bottom offset every floater uses */
+--floating-width:366px;                  /* 390 - 2x12: the width floating surfaces span */
+}
